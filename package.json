@@ -1,0 +1,29 @@
+{
+  "name": "datatrak",
+  "version": "1.0.0",
+  "description": "data tracker for nonprofits",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node scripts/seedDB.js",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/K-ai30/24-project-3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/K-ai30/24-project-3/issues"
+  },
+  "homepage": "https://github.com/K-ai30/24-project-3#readme"
+}
