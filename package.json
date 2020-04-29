@@ -14,7 +14,8 @@
     "start": "node server.js",
     "seed": "node scripts/seedDB.js",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "install": "cd client && npm install"
   },
   "repository": {
     "type": "git",
