@@ -12,9 +12,9 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "PORT=3011 react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": "react-app"
