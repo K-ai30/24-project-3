@@ -1,0 +1,13 @@
+import React from "react";
+import './style.css';
+
+const TextInput = props => {
+    return (
+        <div className="form-group">
+            <label HTMLfor={props.id}>{props.labelText}</label>
+            <input type="text" className="form-control" id={props.id} placeholder={props.placeholder}/>
+        </div>
+    )
+}
+
+export default TextInput;
