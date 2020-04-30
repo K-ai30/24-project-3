@@ -7,7 +7,7 @@ const CommunitySchema = new Schema({
     type: String,
     trim: true,
     required: "Community name is Required"
-  },
+  }
 });
 
 

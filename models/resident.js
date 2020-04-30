@@ -40,8 +40,8 @@ const ResidentSchema = new Schema({
     required: "Street is Required"
   },
   communityID:{
-        type: Schema.Types.ObjectId,
-        ref: "Community"   
+    type: Schema.Types.ObjectId,
+    ref: "Community"   
   },
   dob:{
     type: Date,
