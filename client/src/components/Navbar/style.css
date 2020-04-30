@@ -1,9 +1,10 @@
 button {
     text-decoration: none;
-    padding: 5px;
     background-color: #9dca69;
     border-color: #9dca69;
-    color: #ffffff;
+    text-align: center;
+    border-radius: 2px;
+    /* color: #ffffff; */
 }
 
 .custom-shade {
@@ -12,4 +13,13 @@ button {
 
 h3 {
     color: #ffffff;
+}
+
+button, Link {
+    margin: 2px;
+}
+
+button:hover {
+    background-color: #3d66b0;
+    border-color: #3d66b0;
 }
