@@ -6,11 +6,11 @@ const Navbar = () => {
     return (
         <div className="navbar navbar-expand-lg navbar-light custom-shade">
             <h3>DataTrak</h3>
-            <div className="collapse navbar-collapse" id="navbarNav">
-            <button><Link to="/register">Home</Link></button>
-            <button><Link to="/register">Events</Link></button>
-            <button><Link to="/register">Residents</Link></button>
-            <button><Link to="/register">Reports</Link></button>
+            <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <button><Link style={{ textDecoration: 'none' }} to="/register">Home</Link></button>
+            <button><Link style={{ textDecoration: 'none' }} to="/register">Events</Link></button>
+            <button><Link style={{ textDecoration: 'none' }} to="/register">Residents</Link></button>
+            <button><Link style={{ textDecoration: 'none' }} to="/register">Reports</Link></button>
             </div>
         </div>
     )

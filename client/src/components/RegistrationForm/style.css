@@ -2,3 +2,34 @@
     background-color: #9dca69;
     border-color: #9dca69;
 }
+
+.wrapper {
+    background-color: rgb(241, 241, 241);
+    margin: 50px 50px 50px 50px;
+    padding: 50px;
+}
+
+#field {
+    margin-left: 10px;
+}
+
+#addEvent {
+    float: right;
+    margin: 0;
+}
+
+#addEvent:hover {
+    background-color: #3d66b0;
+}
+/* 
+#submitResident {
+    float: left;
+} */
+
+#submitResident:hover {
+    background-color: #3d66b0;
+}
+
+col {
+    display: inline-block;
+}

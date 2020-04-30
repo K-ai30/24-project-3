@@ -1,0 +1,12 @@
+.custom-color {
+    background-color: #9dca69;
+    border-color: #9dca69;
+}
+
+#login:hover {
+    background-color: #3d66b0;
+}
+
+#signup:hover {
+    background-color: #3d66b0;
+}
