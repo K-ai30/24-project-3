@@ -10,3 +10,10 @@
 #signup:hover {
     background-color: #3d66b0;
 }
+
+.wrapper {
+    background-color: rgb(65, 63, 63);
+    width: 50%;
+    opacity: .9;
+    
+}

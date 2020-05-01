@@ -13,7 +13,7 @@ class RegistrationForm extends Component {
 
  render() {
      return (
-         <form className="wrapper">
+         <form className="wrapper mx-auto align-middle">
             <button id="addEvent" className="btn btn-info custom-color">+ Add Event</button>
             <Row>
                 <Col>
@@ -34,6 +34,7 @@ class RegistrationForm extends Component {
                     <TextInput id="phone" placeholder="(404) 300-5000" labelText="Phone Number"/>
                     <TextInput id="addressOne" placeholder="123 Some Street" labelText="Address 1" />
                     <TextInput id="city" placeholder="Atlanta" labelText="City" />
+                    <TextInput id="state" placeholder="Georgia" labelText="State" />
                 </Col>
                 <Col>
                     <TextInput id="dateOfBirth" placeholder="05/01/1959" labelText="Date of Birth"/>
@@ -54,7 +55,7 @@ class RegistrationForm extends Component {
                     <TextInput id="last-name" placeholder="Smith" labelText="Last Name"/>
                     <TextInput id="email" placeholder="Jane_Smith@test.com" labelText="Email" />
                     <TextInput id="addressTwo" placeholder="Apt 100" labelText="Address 2" />
-                    <TextInput id="state" placeholder="Georgia" labelText="State" />
+                    <TextInput id="zip" placeholder="30310" labelText="Zip" />
                 </Col>
             </Row>
             <button id="submitResident" className="btn btn-info custom-color">Submit</button>
