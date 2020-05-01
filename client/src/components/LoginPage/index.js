@@ -10,7 +10,7 @@ class LoginPage extends Component {
 
     render() {
         return (
-           <form className="wrapper">
+           <form className="wrapper mx-auto align-middle">
                <TextInput id="username" placeholder="Jane Doe" labelText="Username"/>
                <TextInput id="password" placeholder="******" labelText="Password"/>
                <button id="login" className="btn btn-info custom-color">Login</button>

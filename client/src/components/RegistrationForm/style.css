@@ -21,10 +21,6 @@
 #addEvent:hover {
     background-color: #3d66b0;
 }
-/* 
-#submitResident {
-    float: left;
-} */
 
 #submitResident:hover {
     background-color: #3d66b0;
@@ -33,3 +29,4 @@
 col {
     display: inline-block;
 }
+
