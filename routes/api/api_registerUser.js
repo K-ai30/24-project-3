@@ -3,9 +3,9 @@ const express = require("express")
 const router = express.Router();
 const registerUser = require("../../controllers/registerUserController");
 
-// Matches with "/api/register"
+// Matches with "/api/user/register"
 router
-  .route("/")
+  .route("/register")
   .get(registerUser.findAll)
   .post(registerUser.create);
 

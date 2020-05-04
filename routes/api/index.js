@@ -1,16 +1,18 @@
-
-
 const express = require("express")
 const router = express.Router();
-const register = require("./api_registerUser");
-const update = require("./api_updateUser");
+const registerUser = require("./api_registerUser");
+const updateUser = require("./api_UpdateUser");
 const admin = require("./api_registerAdmin");
+const community = require("./api_community");
+const UpdateCommunity = require("./api_UpdateCommunity");
 
-// Book routes
-router.use("/register", register);
-router.use("/update", update);
+// App routes
+router.use("/user", registerUser);
+router.use("/update_user", updateUser);
 router.use("/admin", admin);
+router.use("/community", community);
+router.use("/update_community", UpdateCommunity);
 
-console.log('this is our router in api/indx.js', router)
+// console.log('this is our router in api/indx.js', router)
 
 module.exports = router;

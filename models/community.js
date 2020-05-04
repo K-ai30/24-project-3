@@ -10,9 +10,6 @@ const CommunitySchema = new Schema({
   }
 });
 
-
-
-
 const Community = mongoose.model("Community", CommunitySchema);
 
 module.exports = Community;

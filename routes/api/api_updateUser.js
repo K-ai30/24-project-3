@@ -3,7 +3,7 @@ const express = require("express")
 const router = express.Router();
 const updateUSer = require("../../controllers/updateUser.Controller");
 
-// Matches with "/api/books/:id"
+// Matches with "/api/update_user/:id"
 router
   .route("/:id")
   .get(updateUSer.findById)
