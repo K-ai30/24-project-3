@@ -3,8 +3,7 @@ const express = require("express")
 const router = express.Router();
 const apiRoutes = require("./api/index.js");
 
-//console.log('this is our router in index.js!!!', router)
-////console.log('this is our api routes imported in index.js', apiRoutes)
+
 
 // API Routes
 router.use("/api", apiRoutes);
