@@ -19,7 +19,7 @@ class RegistrationForm extends Component {
                 <Col>
                 <div className="input-group mb-3" labelText="Community">
                 <div className="input-group-prepend">
-                    <label className="input-group-text" HTMLfor="inputGroupSelect01">Community</label>
+                    <label className="input-group-text" htmlFor="inputGroupSelect01">Community</label>
                 </div>
                 <select className="custom-select" id="inputGroupSelect01">
                     <option selected>Choose...</option>
@@ -53,7 +53,8 @@ class RegistrationForm extends Component {
                         <input type="text" className="form-control col-6" aria-label="Text input with radio button"/>
                     </div>
                     <TextInput id="last-name" placeholder="Smith" labelText="Last Name"/>
-                    <TextInput id="email" placeholder="Jane_Smith@test.com" labelText="Email" />
+                    <TextInput id="emailTwo" placeholder="Jane_Smith@test.com" labelText="Email" />
+                    <TextInput id="password" placeholder="******" labelText="Password" />
                     <TextInput id="addressTwo" placeholder="Apt 100" labelText="Address 2" />
                     <TextInput id="zip" placeholder="30310" labelText="Zip" />
                 </Col>
