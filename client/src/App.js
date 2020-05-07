@@ -6,8 +6,9 @@ import Navbar from "./components/Navbar/NavBar";
 import Footer from "./components/Footer";
 import LoginPage from "./components/LoginPage";
 import './assets/css/global.css';
-import SignUpForm from "./components/SingnUpForm"
-import EventForm from "./components/EventForm"
+import SignUpForm from "./components/SingnUpForm";
+import EventForm from "./components/EventForm";
+import AllEvents from './components/AllEvents_page/index';
 //import Banner image
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/register" component={RegistrationForm}/>
           <Route exact path="/signup" component={SignUpForm}/>
           <Route exact path="/event" component={EventForm}/>
+          <Route exact path="/allevents" component={AllEvents}/>
         </Switch>
         <Footer/>
       </Router>
