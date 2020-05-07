@@ -31,7 +31,7 @@ class ReportPage extends Component {
                 <div className="wrapperTwo">
                     <h2>Report</h2>
                     <canvas id="myChart" width="300" height="300">
-                        <Chart/>
+                        {/* <Chart/> */}
                     </canvas>
                 </div>
             </form>
