@@ -20,7 +20,12 @@ const EventSchema = new Schema({
   communityID:{
         type: Schema.Types.ObjectId,
         ref: "Community"   
-  }
+  },
+  usersAttended:
+  [{ type:Schema.Types.ObjectID,
+    ref:"user",
+    unique:true
+  }]
 
 });
 
