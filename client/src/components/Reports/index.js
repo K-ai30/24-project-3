@@ -2,6 +2,21 @@ import React, { Component } from 'react';
 import './style.css';
 import Chart from '../Charts';
 
+const testData = {
+    labels: [
+      "Red",
+      "Green",
+      "Yellow"
+    ],
+    datasets: [
+      {
+        data: [300, 50, 100],
+        backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+      }
+    ]
+}
+// write download pdf code into class component
+
 class ReportPage extends Component {
     render () {
         return(
@@ -30,9 +45,10 @@ class ReportPage extends Component {
 
                 <div className="wrapperTwo">
                     <h2>Report</h2>
-                    <canvas id="myChart" width="300" height="300">
+                    <Chart type="pie" data={testData}/>
+                    {/* <canvas id="myChart" width="300" height="300"> */}
                         {/* <Chart/> */}
-                    </canvas>
+                    {/* </canvas> */}
                 </div>
             </form>
         )
@@ -40,3 +56,7 @@ class ReportPage extends Component {
 }
 
 export default ReportPage;
+
+// how to get our data into this chart
+// make a call to database to get info we need
+// make data look like out testData
