@@ -5,6 +5,7 @@ const updateUser = require("./api_UpdateUser");
 const admin = require("./api_registerAdmin");
 const community = require("./api_community");
 const UpdateCommunity = require("./api_UpdateCommunity");
+const event = require("./api_events");
 
 // App routes
 router.use("/user", registerUser);
@@ -12,6 +13,7 @@ router.use("/update_user", updateUser);
 router.use("/admin", admin);
 router.use("/community", community);
 router.use("/update_community", UpdateCommunity);
+router.use("/event", event);
 
 // console.log('this is our router in api/indx.js', router)
 
