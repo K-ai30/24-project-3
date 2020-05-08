@@ -7,7 +7,6 @@ import RegistrationForm from "./components/RegistrationForm";
 import LoginPage from "./components/LoginPage";
 
 import './assets/css/global.css';
-import EventForm from "./components/EventForm";
 import AllEvents from './components/AllEvents_page/index';
 import SignUpForm from "./components/SignUpForm";
 import EventForm from "./components/EventForm";
