@@ -3,12 +3,11 @@ const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 
-console.log('routers inside server .js!!!!', routes)
 
 const db = require("./models");
 
 const app = express();
-const PORT = process.env.PORT || 3011;
+const PORT = process.env.PORT || 3001;
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));

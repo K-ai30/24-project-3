@@ -11,7 +11,7 @@ class LoginPage extends Component {
     render() {
         return (
            <form className="wrapper mx-auto align-middle">
-               <TextInput id="username" placeholder="Jane Doe" labelText="Username"/>
+               <TextInput id="emailOne" placeholder="Jane_Doe@testemail.com" labelText="Email"/>
                <TextInput id="password" placeholder="******" labelText="Password"/>
                <button id="login" className="btn btn-info custom-color">Login</button>
             <button id="signup" className="btn btn-info custom-color">Sign up</button>
