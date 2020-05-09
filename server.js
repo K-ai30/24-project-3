@@ -5,7 +5,7 @@ const routes = require("./routes");
 const session = require("express-session");
 //for future developments we can use jwt to persist the login session longer.
 //var jwt = require('jsonwebtoken');
-//var bcrypt = require('bcryptjs');
+
 const passport = require("./passport/passport");
 
 const app = express();

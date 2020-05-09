@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const bcrypt = require('bcryptjs');
 const UserSchema = new Schema({
     first: {
         type: String,
@@ -69,6 +70,10 @@ const UserSchema = new Schema({
 });
 
 
+UserSchema.pre('save',(next)=>{
+  this.password = bcrypt.hashSync(this.password, bcrypt.genSaltSync(10), null);
+  next();
+})
 
 UserSchema.methods.setFullName = function() {
   this.fullName = `${this.firstName} ${this.lastName}`;
