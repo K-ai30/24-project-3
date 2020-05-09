@@ -12,6 +12,7 @@ import SignUpForm from "./components/SignUpForm";
 import EventForm from "./components/EventForm";
 import ReportPage from './components/Reports';
 import Footer from "./components/Footer";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route exact path="/event" component={EventForm}/>
           <Route exact path="/allevents" component={AllEvents}/>
           <Route exact path="/reports" component={ReportPage}/>
+          <ProtectedRoute exact path="/private" component={()=> (<div>hello auth</div>)}/>
         </Switch>
         <Footer/>
       </Router>
