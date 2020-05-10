@@ -13,7 +13,7 @@ const UserSchema = new Schema({
         required: "last name is Required"
       },
       phone:{
-        type: Number,
+        type: String,
         trim: true,
         required: "phone number is Required"
       },
@@ -32,10 +32,15 @@ const UserSchema = new Schema({
         trim: true,
         required: "Zip is Required"
       },
-      street:{
+      address1:{
         type: String,
         trim: true,
         required: "Street is Required"
+      },
+      address2:{
+        type: String,
+        trim: true,
+        required: "Appt # required"
       },
       communityID:{
         type: Schema.Types.ObjectId,
@@ -69,10 +74,10 @@ const UserSchema = new Schema({
 
 });
 
-
-UserSchema.pre('save',(next)=>{
+//before a user is entered into the database encrypt the password.
+UserSchema.pre('save',function (next){
   this.password = bcrypt.hashSync(this.password, bcrypt.genSaltSync(10), null);
-  next();
+  next()
 })
 
 UserSchema.methods.setFullName = function() {

@@ -5,7 +5,8 @@ const Schema = mongoose.Schema;
 //could do additional validation for some of these fields probably
 const ChartSchema = new Schema({
     creationDate:{
-        type: Date.now(),
+        type: Date,
+        default:Date.now()
     },
     category:{
         type:String
