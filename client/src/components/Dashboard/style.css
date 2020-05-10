@@ -30,7 +30,7 @@
 }
 
 .dashboardmenu span{
-    font-size: 18px;
+    font-size: 17px;
     font-weight: bold;
     text-transform: uppercase;
     
@@ -38,13 +38,17 @@
 }
 
 .dashboardmenu .iconeplus svg{
-   color: green;
+   color: #007bff;
     text-align: center;
     height: 50px;
     display: block;
     margin-top: 10px;
     
     
+}
+
+a.dashboardmenu  {
+    text-decoration: none;
 }
 
 .dashboardSidebar ul{
@@ -66,4 +70,6 @@
     box-shadow: 15px 0 35px rgba(0,0,0,0.1) ,0  -15px 35px rgba(0,0,0,0.1),0  15px 35px rgba(0,0,0,0.1);
     height: 100vh;
     padding: 10px;
+    background-image: linear-gradient(45deg,#11998e,#1ce669);
 }
+
