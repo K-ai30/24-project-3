@@ -1,5 +1,6 @@
 module.exports = {
     Community: require("./community"),
     User: require("./user"),
-    Event: require("./event")
+    Event: require("./event"),
+    Chart: require("./chart")
 };

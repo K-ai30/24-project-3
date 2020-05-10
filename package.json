@@ -8,6 +8,7 @@
     "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
+    "faker": "^4.1.0",
     "if-env": "^1.0.4",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.10",
@@ -15,6 +16,7 @@
     "passport-local": "^1.0.0"
   },
   "devDependencies": {
+    "colonize": "^1.0.5",
     "concurrently": "^5.2.0"
   },
   "scripts": {
