@@ -9,8 +9,8 @@ mongoose.connect(
 
 const communitySeed = [
     {_id:"comm1", name:"community 1"},
-    {_id:"comm2",name:"community 2"},
-    {_id:"comm3",name:"community 3"}
+    {_id:"comm2", name:"community 2"},
+    {_id:"comm3", name:"community 3"}
 ];
 
 const eventSeed = [
@@ -34,7 +34,8 @@ const userSeed = [
 
 const residentSeed = [
   // replace this with seed objects
-    {first: "frank",
+    {
+      first: "frank",
       last:"sinatra",
       phone:5555555555,
       state:"georgia",
@@ -70,7 +71,7 @@ const residentSeed = [
   {
     id: 2,
     first: "Laurie",
-    last:"Ovitz",
+    last: "Ovitz",
     community: "Community 5",
     ageBracket: "Adult",
     date of birth: "09/07/1977",
@@ -89,7 +90,7 @@ const residentSeed = [
   {
     id: 3,
     first: "Kai",
-    last:"Johnsee", 
+    last: "Johnsee", 
     community: "Community 5",
     ageBracket: "Youth",
     date of birth: "08/12/2002",
@@ -127,7 +128,7 @@ const residentSeed = [
   {
     id: 5,
     first: "Anne-corinne",
-    last:"Delacourt",
+    last: "Delacourt",
     community: "Community 4",
     ageBracket: "Adult",
     date of birth: "02/01/1993",
@@ -240,21 +241,21 @@ const residentSeed = [
   },
   {
     id: 11,
-    first:"Stanislas",
-    last:"Cursons",
-    community:"Community 5",
+    first: "Stanislas",
+    last: "Cursons",
+    community: "Community 5",
     ageBracket: "Senior",
-    date of birth:"09/26/1937",
-    gender:"Male",
-    phone:"(973)8124579",
-    email:"scursonsa@nytimes.com",
-    password:"NRbHu5dT5Pu",
+    date of birth: "09/26/1937",
+    gender: "Male",
+    phone: "(973)8124579",
+    email: "scursonsa@nytimes.com",
+    password: "NRbHu5dT5Pu",
     address: {
-      address 1:"87148 Norway Maple Terrace",
-      address 2:"10 Mitchell Drive",
-      city:"Jersey City",
-      state:"New Jersey",
-      zip:"07310"
+      address 1: "87148 Norway Maple Terrace",
+      address 2: "10 Mitchell Drive",
+      city: "Jersey City",
+      state: "New Jersey",
+      zip: 07310
     }
   },
   {
@@ -550,8 +551,8 @@ const residentSeed = [
     ageBracket: "Adult",
     date of birth: "02/09/1967",
     gender: "Female",
-    phone:"(316)1374096",
-    email:"zcrepinq@globo.com",
+    phone: "(316)1374096",
+    email: "zcrepinq@globo.com",
     password: "ARgDktqmJ83",
     address: {
       address 1: "23831 Dakota Hill",
@@ -619,7 +620,6 @@ const residentSeed = [
     }
   },
   */
-
 ]
 
 db.Community.remove({})
