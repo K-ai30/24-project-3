@@ -12,7 +12,7 @@ import SignUpForm from "./components/SignUpForm";
 import EventForm from "./components/EventForm";
 import ReportPage from './components/Reports';
 import Footer from "./components/Footer";
-import DashboardPage from "./components/Dashboard"
+import DashboardPage from "./components/Dashboard";
 
 function App() {
   return (
