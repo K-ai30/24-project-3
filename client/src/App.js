@@ -13,7 +13,7 @@ import EventForm from "./components/EventForm";
 import ReportPage from './components/Reports';
 import Footer from "./components/Footer";
 import ProtectedRoute from "./components/ProtectedRoute";
-import DashboardPage from "./components/Dashboard"
+import DashboardPage from "./components/Dashboard";
 
 function App() {
   return (
