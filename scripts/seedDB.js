@@ -19,7 +19,7 @@ const eventSeed = [
       details:"a class for the older crowd",
       communityID:"comm1"
      },
-]
+];
 
 const userSeed = [
     {email: "admin@gmail.com",

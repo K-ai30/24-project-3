@@ -2,8 +2,13 @@ import React, { Component } from "react";
 import { Pie, Bar } from "react-chartjs-2";
 
 class Chart extends Component {
+    // componentDidMount() {
+    //     this.renderChart();
+       
+    //   }
 
     renderChart(chartType, data) {
+        console.log("data inside the chart",data)
         switch(chartType) {
             case "pie": 
                 return <Pie data={data} />;

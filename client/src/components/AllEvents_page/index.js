@@ -40,8 +40,8 @@ class AllEvents extends Component {
                         <tr key={index}>
                             <th scope="row">{index +1}</th>
                             <td>{event.name}</td>
-                            <td>{event.name}</td>
-                            <td>{event.name}</td>
+                            <td>{event.details}</td>
+                            <td>{event._id}</td>
                         </tr>
 
                     )
