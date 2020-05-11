@@ -70,7 +70,7 @@ function seedUsers(communities) {
     {
       first: "Ilaire",
       last: "Mackrell",
-      community: communities[getRandomIndex(communities)],
+      communityID: communities[getRandomIndex(communities)],
       ageBracket: "Parent",
       dob: "12/30/1967",
       gender: "Male",
@@ -86,7 +86,7 @@ function seedUsers(communities) {
     {
       first: "Laurie",
       last: "Ovitz",
-      community: communities[getRandomIndex(communities)],
+      communityID: communities[getRandomIndex(communities)],
       ageBracket: "Adult",
       dob: "09/07/1977",
       gender: "Female",
@@ -104,7 +104,7 @@ function seedUsers(communities) {
     {
       first: "Kai",
       last: "Johnsee", 
-      community: communities[getRandomIndex(communities)],
+      communityID: communities[getRandomIndex(communities)],
       ageBracket: "Youth",
       dob: "08/12/2002",
       gender: "Female", 
@@ -122,7 +122,7 @@ function seedUsers(communities) {
     {
       first: "Winston",
       last: "Pavlenkov",
-      community: communities[getRandomIndex(communities)],
+      communityID: communities[getRandomIndex(communities)],
       ageBracket: "Adult",
       dob: "09/30/1989",
       gender: "Male",
@@ -139,7 +139,7 @@ function seedUsers(communities) {
     {
       first: "Anne-corinne",
       last: "Delacourt",
-      community: communities[getRandomIndex(communities)],
+      communityID: communities[getRandomIndex(communities)],
       ageBracket: "Adult",
       dob: "02/01/1993",
       gender: "Female",
@@ -156,7 +156,7 @@ function seedUsers(communities) {
     {
       first: "Colby",
       last: "Robbeke",
-      community: communities[getRandomIndex(communities)],
+      communityID: communities[getRandomIndex(communities)],
       ageBracket: "Senior",
       dob: "09/15/1953",
       gender: "Male",
@@ -173,7 +173,7 @@ function seedUsers(communities) {
     {
       first: "Filip",
       last: "Beane",
-      community: communities[getRandomIndex(communities)],
+      communityID: communities[getRandomIndex(communities)],
       ageBracket: "Parent",
       dob: "07/22/1963",
       gender: "Male",
@@ -190,7 +190,7 @@ function seedUsers(communities) {
     {
       first: "Rodolphe",
       last: "Gatesman",
-      community: communities[getRandomIndex(communities)],
+      communityID: communities[getRandomIndex(communities)],
       ageBracket: "Youth",
       dob: "07/31/2001",
       gender: "Male",
@@ -207,7 +207,7 @@ function seedUsers(communities) {
     {
       first: "Marthena",
       last: "Insole",
-      community: communities[getRandomIndex(communities)],
+      communityID: communities[getRandomIndex(communities)],
       ageBracket: "Youth",
       dob: "11/25/2015",
       gender: "Female",
@@ -224,7 +224,7 @@ function seedUsers(communities) {
     {
       first: "Liana",
       last: "Wardley",
-      community: communities[getRandomIndex(communities)],
+      communityID: communities[getRandomIndex(communities)],
       ageBracket: "Youth",
       dob: "04/06/2011",
       gender: "Female",
@@ -241,7 +241,7 @@ function seedUsers(communities) {
     {
       first: "Stanislas",
       last: "Cursons",
-      community: communities[getRandomIndex(communities)],
+      communityID: communities[getRandomIndex(communities)],
       ageBracket: "Senior",
       dob: "09/26/1937",
       gender: "Male",
@@ -258,7 +258,7 @@ function seedUsers(communities) {
     {
       first: "Mathias",
       last: "Catcheside",
-      community: communities[getRandomIndex(communities)],
+      communityID: communities[getRandomIndex(communities)],
       ageBracket: "Senior",
       dob: "01/07/1940",
       gender: "Male",
@@ -275,7 +275,7 @@ function seedUsers(communities) {
     {
       first: "Jeanna",
       last: "Penvarne",
-      community: communities[getRandomIndex(communities)],
+      communityID: communities[getRandomIndex(communities)],
       ageBracket: "Senior",
       dob: "01/29/1941",
       gender: "Female",
@@ -292,7 +292,7 @@ function seedUsers(communities) {
     {
       first: "Dinny",
       last: "Estcourt",
-      community: communities[getRandomIndex(communities)],
+      communityID: communities[getRandomIndex(communities)],
       ageBracket: "Adult",
       dob: "01/06/1994",
       gender: "Female",
@@ -309,7 +309,7 @@ function seedUsers(communities) {
     {
       first: "Alicea",
       last: "De Castri",
-      community: communities[getRandomIndex(communities)],
+      communityID: communities[getRandomIndex(communities)],
       ageBracket: "Senior",
       dob: "02/21/1957",
       gender: "Female",
@@ -326,7 +326,7 @@ function seedUsers(communities) {
     {
       first: "Osgood",
       last: "Hubbucke",
-      community: communities[getRandomIndex(communities)],
+      communityID: communities[getRandomIndex(communities)],
       ageBracket: "Adult",
       dob: "07/06/1967",
       gender: "Male",
@@ -343,7 +343,7 @@ function seedUsers(communities) {
     {
       first: "Ardith",
       last: "Janosevic",
-      community: communities[getRandomIndex(communities)],
+      communityID: communities[getRandomIndex(communities)],
       ageBracket: "Senior",
       dob: "11/22/1936",
       gender: "Female",
@@ -360,7 +360,7 @@ function seedUsers(communities) {
     {
       first: "Wynnie",
       last: "Brockie",
-      community: communities[getRandomIndex(communities)],
+      communityID: communities[getRandomIndex(communities)],
       ageBracket: "Youth",
       dob: "04/05/2009",
       gender: "Female",
@@ -377,7 +377,7 @@ function seedUsers(communities) {
     {
       first: "Arlan",
       last: "Ollington",
-      community: communities[getRandomIndex(communities)],
+      communityID: communities[getRandomIndex(communities)],
       ageBracket: "Youth",
       dob: "01/12/2014",
       gender: "Male",
@@ -394,7 +394,7 @@ function seedUsers(communities) {
     {
       first: "Odilia",
       last: "Curton",
-      community: communities[getRandomIndex(communities)],
+      communityID: communities[getRandomIndex(communities)],
       ageBracket: "Parent",
       dob: "10/27/1983",
       gender: "Female",
@@ -411,7 +411,7 @@ function seedUsers(communities) {
     {
       first: "Everard",
       last: "Guterson",
-      community: communities[getRandomIndex(communities)],
+      communityID: communities[getRandomIndex(communities)],
       ageBracket: "Senior",
       dob: "11/07/1941",
       gender: "Male",
@@ -428,7 +428,7 @@ function seedUsers(communities) {
     {
       first: "Jamal",
       last: "Felton",
-      community: communities[getRandomIndex(communities)],
+      communityID: communities[getRandomIndex(communities)],
       ageBracket: "Parent",
       dob: "06/16/1976",
       gender: "Male",
@@ -445,7 +445,7 @@ function seedUsers(communities) {
     {
       first: "Desdemona",
       last: "Duchatel",
-      community: communities[getRandomIndex(communities)],
+      communityID: communities[getRandomIndex(communities)],
       ageBracket: "Adult",
       dob: "01/10/1963",
       gender: "Female",
@@ -462,7 +462,7 @@ function seedUsers(communities) {
     {
       first: "Wileen",
       last: "Beldam",
-      community: communities[getRandomIndex(communities)],
+      communityID: communities[getRandomIndex(communities)],
       ageBracket: "Parent",
       dob: "08/29/1995",
       gender: "Female",
@@ -479,7 +479,7 @@ function seedUsers(communities) {
     {
       first: "Brennan",
       last: "Huniwall",
-      community: communities[getRandomIndex(communities)],
+      communityID: communities[getRandomIndex(communities)],
       ageBracket: "Adult",
       dob: "12/30/1996",
       gender: "Male",
@@ -496,7 +496,7 @@ function seedUsers(communities) {
     {
       first: "Eula",
       last: "Sly",
-      community: communities[getRandomIndex(communities)],
+      communityID: communities[getRandomIndex(communities)],
       ageBracket: "Parent",
       dob: "01/24/1971",
       gender: "Female",
@@ -513,7 +513,7 @@ function seedUsers(communities) {
     {
       first: "Zabrina",
       last: "Crepin",
-      community: communities[getRandomIndex(communities)],
+      communityID: communities[getRandomIndex(communities)],
       ageBracket: "Adult",
       dob: "02/09/1967",
       gender: "Female",
@@ -530,7 +530,7 @@ function seedUsers(communities) {
     {
       first: "Cary",
       last: "Thieme",
-      community: communities[getRandomIndex(communities)],
+      communityID: communities[getRandomIndex(communities)],
       ageBracket: "Parent",
       dob: "03/13/1967",
       gender: "Female",
@@ -547,7 +547,7 @@ function seedUsers(communities) {
     {
       first: "Terrye",
       last: "Costin",
-      community: communities[getRandomIndex(communities)],
+      communityID: communities[getRandomIndex(communities)],
       ageBracket: "Parent",
       dob: "10/11/1983",
       gender: "Female",
@@ -564,7 +564,7 @@ function seedUsers(communities) {
     {
       first: "Olag",
       last: "Strooband",
-      community: communities[getRandomIndex(communities)],
+      communityID: communities[getRandomIndex(communities)],
       ageBracket: "Senior",
       dob: "04/07/1946",
       gender: "Male",
