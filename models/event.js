@@ -23,8 +23,7 @@ const EventSchema = new Schema({
   },
   usersAttended:
   [{ type:Schema.Types.ObjectID,
-    ref:"user",
-    unique:true
+    ref:"user"
   }]
 
 });
