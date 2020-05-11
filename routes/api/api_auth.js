@@ -11,12 +11,12 @@ const passport = require("../../passport/passport");
   //   expiresIn: 86400 // expires in 24 hours
   // });
 
-//api/login
-router.post('/login',passport.authenticate("local"),(req,res)=>{
+//api/auth/login
+router.post('/',passport.authenticate("local"),function(req,res){
   res.json(req.user);
 })
 
-//api/isUserLoggedIn
+//api/auth/isUserLoggedIn
 router.get('/isUserLoggedIn',(req,res)=>{
   if(req.user){
     res.json(req.user);
@@ -31,3 +31,4 @@ router.get('/testlogout', (req,res)=>{
   res.send("logged out");
 })
 
+module.exports =  router;

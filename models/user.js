@@ -80,10 +80,8 @@ UserSchema.pre('save',function (next){
   next()
 })
 
-UserSchema.methods.setFullName = function() {
-  this.fullName = `${this.firstName} ${this.lastName}`;
-
-  return this.fullName;
+UserSchema.methods.comparePassword = function(inputPass) {
+  return bcrypt.compareSync(inputPass,this.password);
 };
 
 

@@ -18,8 +18,8 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-//Add routes, both API and view
-app.use('/', routes);
+
+
 
 
 
@@ -29,6 +29,10 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/datatrak", { us
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
+
+//Add routes, both API and view
+app.use('/', routes);
+
   // var token = jwt.sign({ id: "user._id" }, "super secret jwt secret", {
   //   expiresIn: 86400 // expires in 24 hours
   // });
