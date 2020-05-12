@@ -18,11 +18,12 @@ router.post('/',passport.authenticate("local"),function(req,res){
 
 //api/auth/isUserLoggedIn
 router.get('/isUserLoggedIn',(req,res)=>{
+  console.log(req.user);
   if(req.user){
-    res.json(req.user);
+    res.json({loggedIn:true});
   }
   else{
-    res.json({})
+    res.json({loggedIn:false})
   }
 })
 
