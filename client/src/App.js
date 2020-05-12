@@ -20,15 +20,17 @@ function App() {
       <Router>
         <Navbar/>
         <Switch>
-          <Route exact path="/" component={LoginPage}/>
-          <Route exact path="/events" component={EventForm}/>
-          <Route exact path="/register" component={RegistrationForm}/>
-          <Route exact path="/signup" component={SignUpForm}/>
-          <Route exact path="/event" component={EventForm}/>
-          <Route exact path="/allevents" component={AllEvents}/>
-          <Route exact path="/reports" component={ReportPage}/>
+          
+
           <ProtectedRoute exact path="/private" component={()=> (<div>hello auth</div>)}/>
-          <Route exact path="/dashboard" component={DashboardPage}/>
+          <ProtectedRoute exact path="/events" component={EventForm}/>
+          <ProtectedRoute exact path="/register" component={RegistrationForm}/>
+          <ProtectedRoute exact path="/signup" component={SignUpForm}/>
+          <ProtectedRoute exact path="/event" component={EventForm}/>
+          <ProtectedRoute exact path="/allevents" component={AllEvents}/>
+          <ProtectedRoute exact path="/reports" component={ReportPage}/>
+          <ProtectedRoute exact path="/dashboard" component={DashboardPage}/>
+          <Route exact path="/" component={LoginPage}/>
 
         </Switch>
         <Footer/>

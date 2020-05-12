@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -8,6 +8,8 @@ import {
   useHistory,
   useLocation
 } from "react-router-dom";
+import axios from "axios";
+import LoginPage from "../LoginPage";
 
 // This example has 3 pages: a public page, a protected
 // page, and a login screen. In order to see the protected
@@ -24,31 +26,30 @@ import {
 // and you'll see you go back to the page you visited
 // just *before* logging in, the public page.
 
-const fakeAuth = {
-  isAuthenticated: true,
-//   authenticate(cb) {
-//     fakeAuth.isAuthenticated = true;
-//     setTimeout(cb, 100); // fake async
-//   },
-//   signout(cb) {
-//     fakeAuth.isAuthenticated = false;
-//     setTimeout(cb, 100);
-//   }
-  //axios.get("/auth").then(isAuthenticated = true);
-};
-
 
 // A wrapper for <Route> that redirects to the login
 // screen if you're not yet authenticated.
  function PrivateRoute({ children, ...rest }) {
+  const [state, setState] = useState({isAuthenticated:false});
 
-    if(fakeAuth.isAuthenticated){
+    useEffect(() => {
+      const fetchdata =async ()=>{
+       const res = await axios.get("/api/auth/isUserLoggedIn");
+        if(res.data.loggedIn){
+          console.log("trying ot set state to true!");
+          setState({isAuthenticated:true});
+        }
+      }
+      fetchdata();
+    }, [])
+    console.log("the state is: "+ state.isAuthenticated);
+    if(state.isAuthenticated){
        return (
         <Route {...rest} render={() => children }/>
        ) 
     }
     else{
-      return (<Redirect to={{ pathname: "/"}} />)
+      return (<LoginPage  />)
     }
 }
 
