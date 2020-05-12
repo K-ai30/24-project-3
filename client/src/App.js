@@ -14,15 +14,17 @@ import ReportPage from './components/Reports';
 import Footer from "./components/Footer";
 import ProtectedRoute from "./components/ProtectedRoute";
 import DashboardPage from "./components/Dashboard";
+import UpdateAttendance from "./components/Update-attendance"
+
+
+
 
 function App() {
   return (
       <Router>
         <Navbar/>
         <Switch>
-          
-
-          <ProtectedRoute exact path="/private" component={()=> (<div>hello auth</div>)}/>
+          <ProtectedRoute exact path="/updateattendance" component={UpdateAttendance}/>
           <ProtectedRoute exact path="/events" component={EventForm}/>
           <ProtectedRoute exact path="/register" component={RegistrationForm}/>
           <ProtectedRoute exact path="/signup" component={SignUpForm}/>
@@ -31,10 +33,9 @@ function App() {
           <ProtectedRoute exact path="/reports" component={ReportPage}/>
           <ProtectedRoute exact path="/dashboard" component={DashboardPage}/>
           <Route exact path="/" component={LoginPage}/>
-
-        </Switch>
+        <Switch/>
         <Footer/>
-      </Router>
+      <Router/>
   );
 }
 
