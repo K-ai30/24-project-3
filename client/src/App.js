@@ -33,9 +33,9 @@ function App() {
           <ProtectedRoute exact path="/reports" component={ReportPage}/>
           <ProtectedRoute exact path="/dashboard" component={DashboardPage}/>
           <Route exact path="/" component={LoginPage}/>
-        <Switch/>
-        <Footer/>
-      <Router/>
+        </Switch>
+        <Footer />
+      </Router>
   );
 }
 
