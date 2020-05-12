@@ -12,29 +12,20 @@ passport.use(new LocalStrategy(
   },
   function(email, password, done) {
     // When a user tries to sign in this code runs    
+    db.User.findOne({email:email},function(err,user){
+      if(err){console.log(err)}
+      if (!user) {
+        return done(null, false, { message: 'Incorrect username.' });
+      }
+      if(!user.comparePassword(password)){
+        return done(null,false, {message: "incorrect password"})
+      }
+      done(null, user);
+    })
 
-      db.User.findOne({
-          email: email
-      }).then(function(dbUser) {
-        // If there's no user with the given email                        
-        if (!dbUser) {          
-          return done(null, false, {
-            message: "Incorrect email."
-          });
-        }
-        // If there is a user with the given email, but the password the user gives us is incorrect
-
-        else if (password!=="correctpassword") {          
-          return done(null, false, {
-            message: "Incorrect password."
-          });
-        }
-        // If none of the above, return the user        
-        return done(null, dbUser);
-      }).catch(error=>{        
-  });
   }
-));
+))
+
 
 // In order to help keep authentication state across HTTP requests,
 // Sequelize needs to serialize and deserialize the user

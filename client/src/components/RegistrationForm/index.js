@@ -30,6 +30,18 @@ class RegistrationForm extends Component {
                     <option value="5">Community 5</option>
                 </select>
                 </div>
+                <div className="input-group mb-3" labelText="ageBracket">
+                <div className="input-group-prepend">
+                    <label className="input-group-text" htmlFor="inputGroupSelect01">Age Bracket</label>
+                </div>
+                <select className="custom-select" id="inputGroupSelect01">
+                    <option selected>Choose...</option>
+                    <option value="1">Senior</option>
+                    <option value="2">Parent</option>
+                    <option value="3">Adult</option>
+                    <option value="4">Youth</option>
+                </select>
+                </div>
                     <TextInput id="first-name" placeholder="Jane" labelText="First Name"/>
                     <TextInput id="phone" placeholder="(404) 300-5000" labelText="Phone Number"/>
                     <TextInput id="addressOne" placeholder="123 Some Street" labelText="Address 1" />
@@ -40,13 +52,13 @@ class RegistrationForm extends Component {
                     <TextInput id="dateOfBirth" placeholder="05/01/1959" labelText="Date of Birth"/>
                     <div className="input-group">
                         <div className="input-group-prepend">
-                            <div className="input-group-text">
+                            <div className="input-group-text" placeholder="Female">
                             <input type="radio" aria-label="Radio button for following text input"/>
                             </div>
                         </div>
                         <input type="text" className="form-control col-6" aria-label="Text input with radio button"/>
                         <div className="input-group-prepend" id="field">
-                            <div className="input-group-text">
+                            <div className="input-group-text" placeholder="Male">
                             <input type="radio" aria-label="Radio button for following text input"/>
                             </div>
                         </div>

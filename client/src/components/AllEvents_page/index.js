@@ -29,9 +29,9 @@ class AllEvents extends Component {
             <thead>
                 <tr>
                 <th scope="col">#</th>
-                <th scope="col">Name</th>
+                <th scope="col">Event Name</th>
                 <th scope="col">Details</th>
-                <th scope="col">CommunityID</th>
+                <th scope="col">Community Name</th>
                 </tr>
             </thead>
             <tbody>
@@ -40,8 +40,8 @@ class AllEvents extends Component {
                         <tr key={index}>
                             <th scope="row">{index +1}</th>
                             <td>{event.name}</td>
-                            <td>{event.name}</td>
-                            <td>{event.name}</td>
+                            <td>{event.details}</td>
+                            <td>{event.communityID.name}</td>
                         </tr>
 
                     )

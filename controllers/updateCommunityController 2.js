@@ -1,23 +1,8 @@
 const db = require("../models/index");
 
 
+
 module.exports = {
-  findAll: function(req, res) {
-    
-    db.Event
-      .find(req.query)
-      .populate("communityID")
-      .sort({ date: -1 })
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-  },
- 
-  create: function(req, res) {
-    db.Event
-      .create(req.body)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-  },
   
   update: function(req, res) {
     db.Community
@@ -38,5 +23,4 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   }
-
 };
