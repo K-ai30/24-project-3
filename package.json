@@ -11,7 +11,7 @@
     "faker": "^4.1.0",
     "if-env": "^1.0.4",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.10",
+    "mongoose": "^5.9.13",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0"
   },
