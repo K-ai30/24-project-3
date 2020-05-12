@@ -14,4 +14,7 @@ export default {
   AllUsers: function() {
     return axios.get("/api/user/getall");
   },
+  AllCommunity: function() {
+    return axios.get("/api/community");
+  },
 };

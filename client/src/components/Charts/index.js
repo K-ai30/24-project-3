@@ -4,13 +4,9 @@ import html2canvas from "html2canvas";
 const pdfConverter = require("jspdf");
 
 class Chart extends Component {
-    // componentDidMount() {
-    //     this.renderChart();
-       
-    //   }
 
     renderChart(chartType, data) {
-        console.log("data inside the chart",data)
+       
         switch(chartType) {
             case "pie": 
                 return <Pie data={data} />;
