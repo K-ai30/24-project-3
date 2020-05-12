@@ -14,6 +14,7 @@ import ReportPage from './components/Reports';
 import Footer from "./components/Footer";
 import ProtectedRoute from "./components/ProtectedRoute";
 import DashboardPage from "./components/Dashboard"
+import UpdateAttendance from "./components/Update-attendance"
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route exact path="/reports" component={ReportPage}/>
           <ProtectedRoute exact path="/private" component={()=> (<div>hello auth</div>)}/>
           <Route exact path="/dashboard" component={DashboardPage}/>
+          <Route exact path="/updateattendance" component={UpdateAttendance}/>
 
         </Switch>
         <Footer/>
