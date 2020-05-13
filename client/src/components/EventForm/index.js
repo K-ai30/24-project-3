@@ -14,7 +14,6 @@ class EventForm extends Component {
  render() {
      return (
          <form className="wrapper mx-auto align-middle">
-            <button id="addEvent" className="btn btn-info custom-color">+ Add Event</button>
             <Row>
                 <Col>
                 <label className="" HTMLfor="inputGroupSelect01">Community</label>
@@ -48,7 +47,7 @@ class EventForm extends Component {
             <textarea className="descriptionInput" placeholder="Low-impact yoga for senior"></textarea>
                 </Col>
             </Row>
-            <button id="submitResident" className="btn btn-info custom-color">Submit</button>
+            <button id="submitResident" className="btn btn-info custom-color">+ Add Event</button>
         </form>
      )
   }
