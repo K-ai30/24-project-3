@@ -8,6 +8,7 @@ import LoginPage from "./components/LoginPage";
 
 import './assets/css/global.css';
 import AllEvents from './components/AllEvents_page/index';
+import AllCommunites from './components/AllCommunities_page';
 import SignUpForm from "./components/SignUpForm";
 import EventForm from "./components/EventForm";
 import ReportPage from './components/Reports';
@@ -32,6 +33,7 @@ function App() {
           <ProtectedRoute exact path="/allevents" component={AllEvents}/>
           <ProtectedRoute exact path="/reports" component={ReportPage}/>
           <ProtectedRoute exact path="/dashboard" component={DashboardPage}/>
+          <ProtectedRoute exact path="/updatecommunities" component={AllCommunites}/>
           <Route exact path="/" component={LoginPage}/>
         </Switch>
         <Footer />
