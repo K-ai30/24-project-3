@@ -82,7 +82,6 @@ class RegistrationForm extends Component {
                             </div>
                             <input type="text" className="form-control col-6" aria-label="Text input with radio button" />
                         </div>
-<<<<<<< HEAD
                         <TextInput id="last-name" placeholder="Smith" labeltext="Last Name" />
                         <TextInput id="emailTwo" placeholder="Jane_Smith@test.com" labeltext="Email" />
                         <TextInput id="password" placeholder="******" labeltext="Password" />
@@ -94,20 +93,6 @@ class RegistrationForm extends Component {
             </form>
         )
     }
-=======
-                        <input type="text" className="form-control col-6" aria-label="Text input with radio button"/>
-                    </div>
-                    <TextInput id="last-name" placeholder="Smith" labelText="Last Name"/>
-                    <TextInput id="emailTwo" placeholder="Jane_Smith@test.com" labelText="Email" />
-                    <TextInput id="addressTwo" placeholder="Apt 100" labelText="Address 2" />
-                    <TextInput id="zip" placeholder="30310" labelText="Zip" />
-                </Col>
-            </Row>
-            <button id="submitResident" className="btn btn-info custom-color">Submit</button>
-        </form>
-     )
-  }
->>>>>>> 541f6461405395ad25c158393e4aed162aead8ed
 }
 
 export default RegistrationForm;
