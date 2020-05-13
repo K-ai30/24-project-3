@@ -58,7 +58,7 @@ class AllEvents extends Component {
                 )}
                 
             </tbody>
-            <button id="editEvent" className="btn btn-info custom-color editEvent">Edit Event</button>
+            <a id="editEvent" href="/events" className="btn btn-info custom-color editEvent">Edit Event</a>
         </table>
         </div>
          
