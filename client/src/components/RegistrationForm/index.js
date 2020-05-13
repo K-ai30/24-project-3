@@ -11,6 +11,8 @@ class RegistrationForm extends Component {
      date: '',
  };
 
+
+ 
  render() {
      return (
          <form className="wrapper mx-auto align-middle">

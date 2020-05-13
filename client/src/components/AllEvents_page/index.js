@@ -25,6 +25,7 @@ class AllEvents extends Component {
  render() {
      return (
          <div className="container">
+            {/* Header and Edit Event Button */}
         <table className="table table-striped table-dark">
             <thead>
                 <tr>
