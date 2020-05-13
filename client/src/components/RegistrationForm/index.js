@@ -66,7 +66,6 @@ class RegistrationForm extends Component {
                     </div>
                     <TextInput id="last-name" placeholder="Smith" labelText="Last Name"/>
                     <TextInput id="emailTwo" placeholder="Jane_Smith@test.com" labelText="Email" />
-                    <TextInput id="password" placeholder="******" labelText="Password" />
                     <TextInput id="addressTwo" placeholder="Apt 100" labelText="Address 2" />
                     <TextInput id="zip" placeholder="30310" labelText="Zip" />
                 </Col>
