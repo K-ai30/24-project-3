@@ -14,7 +14,7 @@ import ReportPage from './components/Reports';
 import Footer from "./components/Footer";
 import ProtectedRoute from "./components/ProtectedRoute";
 import DashboardPage from "./components/Dashboard";
-import UpdateAttendance from "./components/Update-attendance"
+import UpdateAttendance from "./components/Update-attendance";
 
 
 
