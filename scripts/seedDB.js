@@ -78,7 +78,7 @@ function seedUsers(communities) {
       email: "imackrell0@dell.com",
       password: "tnQVU7uWva5P",
       address1: "43 Kedzie Crossing",
-      address2: "1 Hollow Ridge Way",
+      address2: "Apt #208",
       city:"Winston Salem",
       state:"North Carolina",
       zip: 27157
@@ -93,12 +93,11 @@ function seedUsers(communities) {
       phone: "(810)9765505",
       email: "lovitz1@imgur.com",
       password: "4KdLRPt7h",
-      
-        address1: "72283 Holy Cross Street",
-        address2: "7680 American Circle", 
-        city: "Southfield",
-        state: "Michigan", 
-        zip: 48076
+      address1: "72283 Holy Cross Street",
+      address2: "Apt #108", 
+      city: "Southfield",
+      state: "Michigan", 
+      zip: 48076
   
     },
     {
@@ -111,12 +110,11 @@ function seedUsers(communities) {
       phone: "(202)3582310",
       email: "kjohnsee2@oakley.com",
       password: "cL6HtX2c",
-      
-        address1: "7291 Sauthoff Parkway",
-        address2: "3 Rusk Terrace",
-        city: "Washington",
-        state: "District of Columbia",
-        zip: 20535
+      address1: "7291 Sauthoff Parkway",
+      address2: "Apt #407",
+      city: "Washington",
+      state: "District of Columbia",
+      zip: 20535
   
     },
     {
@@ -129,12 +127,11 @@ function seedUsers(communities) {
       phone: "(330)1278507",
       email: "wpavlenkov3@w3.org",
       password: "ZLF5Tvk5rch",
-      
-        address1: "86 Basil Place", 
-        address2: "68684 Goodland Junction",
-        city: "Youngstown",
-        state: "Ohio",
-        zip: 44511
+      address1: "86 Basil Place", 
+      address2: "Apt #307",
+      city: "Youngstown",
+      state: "Ohio",
+      zip: 44511
     },
     {
       first: "Anne-corinne",
@@ -146,12 +143,11 @@ function seedUsers(communities) {
       phone: "(713)1768185",
       email: "adelacourt4@addthis.com",
       password: "ucszXagz",
-      
-        address1: "61953 Sullivan Park",
-        address2: "1 Glacier Hill Avenue",
-        city: "Houston",
-        state: "Texas",
-        zip: 77035
+      address1: "61953 Sullivan Park",
+      address2: "Apt #207",
+      city: "Houston",
+      state: "Texas",
+      zip: 77035
     },
     {
       first: "Colby",
@@ -163,12 +159,11 @@ function seedUsers(communities) {
       phone: "(319)6202221",
       email: "crobbeke5@disqus.com",
       password: "0xoIoP6VUV",
-      
-        address1: "8122 Barnett Circle",
-        address2: "5 Basil Drive",
-        city: "Iowa City",
-        state: "Iowa",
-        zip: 52245
+      address1: "8122 Barnett Circle",
+      address2: "Apt #107",
+      city: "Iowa City",
+      state: "Iowa",
+      zip: 52245
     },
     {
       first: "Filip",
@@ -180,12 +175,11 @@ function seedUsers(communities) {
       phone: "(928)4094206",
       email: "fbeane6@fotki.com",
       password: "5h1Gyj2WKCW",
-      
-        address1: "4 Hauk Drive",
-        address2: "5 International Place",
-        city: "Prescott",
-        state: "Arizona",
-        zip: 86305
+      address1: "4 Hauk Drive",
+      address2: "Apt #406",
+      city: "Prescott",
+      state: "Arizona",
+      zip: 86305
     },
     {
       first: "Rodolphe",
@@ -197,12 +191,11 @@ function seedUsers(communities) {
       phone: "(240)8860036",
       email: "rgatesman7@mlb.com",
       password: "w1VTeiZ",
-      
-        address1: "70939 Holy Cross Way",
-        address2: "643 Manufacturers Point", 
-        city: "Frederick",
-        state: "Maryland",
-        zip: 21705
+      address1: "70939 Holy Cross Way",
+      address2: "Apt #206", 
+      city: "Frederick",
+      state: "Maryland",
+      zip: 21705
     },
     {
       first: "Marthena",
@@ -214,12 +207,11 @@ function seedUsers(communities) {
       phone: "(818)4260007",
       email: "minsole8@amazonaws.com",
       password: "u3A0up8F4q",
-      
-        address1: "02900 Barby Trail",
-        address2: "4 Gateway Parkway",
-        city: "Pasadena",
-        state: "California",
-        zip: 91109
+      address1: "02900 Barby Trail",
+      address2: "Apt #306",
+      city: "Pasadena",
+      state: "California",
+      zip: 91109
     },
     {
       first: "Liana",
@@ -231,12 +223,11 @@ function seedUsers(communities) {
       phone: "(202)6988843",
       email: "lwardley9@tiny.cc",
       password: "7xEszoIEOVv",
-      
-        address1: "8602 Westridge Point",
-        address2: "09 Scoville Place",
-        city: "Washington",
-        state: "District of Columbia",
-        zip: 20503
+      address1: "8602 Westridge Point",
+      address2: "Apt #106",
+      city: "Washington",
+      state: "District of Columbia",
+      zip: 20503
     },
     {
       first: "Stanislas",
@@ -248,12 +239,11 @@ function seedUsers(communities) {
       phone: "(973)8124579",
       email: "scursonsa@nytimes.com",
       password: "NRbHu5dT5Pu",
-      
-        address1: "87148 Norway Maple Terrace",
-        address2: "10 Mitchell Drive",
-        city: "Jersey City",
-        state: "New Jersey",
-        zip: 07310
+      address1: "87148 Norway Maple Terrace",
+      address2: "Apt #405",
+      city: "Jersey City",
+      state: "New Jersey",
+      zip: 07310
     },
     {
       first: "Mathias",
@@ -265,12 +255,11 @@ function seedUsers(communities) {
       phone: "(703)9893793",
       email: "mcatchesideb@opera.com",
       password: "5h9bEoam8",
-      
-        address1: "3223 Petterle Drive",
-        address2: "7 Nobel Pass",
-        city: "Washington",
-        state: "District of Columbia",
-        zip: 20016
+      address1: "3223 Petterle Drive",
+      address2: "Apt #305",
+      city: "Washington",
+      state: "District of Columbia",
+      zip: 20016
     },
     {
       first: "Jeanna",
@@ -282,12 +271,11 @@ function seedUsers(communities) {
       phone: "(304)7989663",
       email: "jpenvarnec@ed.gov",
       password: "JYVlonyRuAoU",
-      
-        address1: "7916 Forest Dale Parkway",
-        address2: "6903 Charing Cross Place",
-        city: "Charleston",
-        state: "West Virginia",
-        zip: 25321
+      address1: "7916 Forest Dale Parkway",
+      address2: "Apt #205",
+      city: "Charleston",
+      state: "West Virginia",
+      zip: 25321
     },
     {
       first: "Dinny",
@@ -299,12 +287,11 @@ function seedUsers(communities) {
       phone: "(325)8977061",
       email: "destcourtd@hibu.com",
       password: "eh4NRwF0i",
-      
-        address1: "709 Doe Crossing Hill",
-        address2: "6028 Crescent Oaks Terrace",
-        city: "Abilene",
-        state: "Texas",
-        zip: 79605
+      address1: "709 Doe Crossing Hill",
+      address2: "Apt #105",
+      city: "Abilene",
+      state: "Texas",
+      zip: 79605
     },
     {
       first: "Alicea",
@@ -316,12 +303,11 @@ function seedUsers(communities) {
       phone: "(808)9755489",
       email: "adecastrie@networksolutions.com",
       password: "FB2zCd",
-      
-        address1: "63260 Brentwood Terrace",
-        address2: "08478 Harbort Plaza",
-        city: "Honolulu",
-        state: "Hawaii",
-        zip: 96805
+      address1: "63260 Brentwood Terrace",
+      address2: "Apt #404",
+      city: "Honolulu",
+      state: "Hawaii",
+      zip: 96805
     },
     {
       first: "Osgood",
@@ -333,12 +319,11 @@ function seedUsers(communities) {
       phone: "(808)2768430",
       email: "ohubbuckef@spotify.com",
       password: "rjpeIqqHwN",
-      
-        address1: "12289 Pawling Junction",
-        address2: "958 Sullivan Center",
-        city: "Honolulu",
-        state: "Hawaii",
-        zip: 96805
+      address1: "12289 Pawling Junction",
+      address2: "Apt #304",
+      city: "Honolulu",
+      state: "Hawaii",
+      zip: 96805
     },
     {
       first: "Ardith",
@@ -350,12 +335,11 @@ function seedUsers(communities) {
       phone: "(510)7165686",
       email: "ajanosevicg@independent.co.uk",
       password: "jnQcX6LpJs",
-      
-        address1: "70 Forest Alley",
-        address2: "4 Continental Crossing",
-        city: "Richmond",
-        state: "California",
-        zip: 94807
+      address1: "70 Forest Alley",
+      address2: "Apt #204",
+      city: "Richmond",
+      state: "California",
+      zip: 94807
     },
     {
       first: "Wynnie",
@@ -367,12 +351,11 @@ function seedUsers(communities) {
       phone: "(434)4324080",
       email: "wbrockieh@squidoo.com",
       password: "RQ6atFiNi",
-      
-        address1: "843 Old Shore Lane",
-        address2: "6 Crest Line Plaza",
-        city: "Lynchburg",
-        state: "Virginia",
-        zip: 24515
+      address1: "843 Old Shore Lane",
+      address2: "Apt #104",
+      city: "Lynchburg",
+      state: "Virginia",
+      zip: 24515
     },
     {
       first: "Arlan",
@@ -384,12 +367,11 @@ function seedUsers(communities) {
       phone: "(318)8511388",
       email: "aollingtoni@sitemeter.com",
       password: "z2cLXVc",
-      
-        address1: "7 Bashford Pass",
-        address2: "38241 Homewood Drive",
-        city: "Boston",
-        state: "Massachusetts",
-        zip: 02104
+      address1: "7 Bashford Pass",
+      address2: "Apt #403",
+      city: "Boston",
+      state: "Massachusetts",
+      zip: 02104
     },
     {
       first: "Odilia",
@@ -401,12 +383,11 @@ function seedUsers(communities) {
       phone: "(313)8284648",
       email: "ocurtonj@1und1.de",
       password: "ccBrvJbw",
-      
-        address1: "0143 Kedzie Drive",
-        address2: "0 Bay Street",
-        city: "Detroit",
-        state: "Michigan",
-        zip: 48242
+      address1: "0143 Kedzie Drive",
+      address2: "Apt #401",
+      city: "Detroit",
+      state: "Michigan",
+      zip: 48242
     },
     {
       first: "Everard",
@@ -418,12 +399,11 @@ function seedUsers(communities) {
       phone: "(323)5718019",
       email: "egutersonk@ftc.gov",
       password: "76N5S7Bzlv",
-      
-        address1: "78503 Alpine Trail",
-        address2: "9 Ryan Point",
-        city: "Los Angeles",
-        state: "California",
-        zip: 90015
+      address1: "78503 Alpine Trail",
+      address2: "Apt #402",
+      city: "Los Angeles",
+      state: "California",
+      zip: 90015
     },
     {
       first: "Jamal",
@@ -435,12 +415,11 @@ function seedUsers(communities) {
       phone: "(775)6090863",
       email: "jfeltonl@sfgate.com",
       password: "4VEAY9bBSo",
-      
-        address1: "43 Cody Lane",
-        address2: "02697 Russell Alley",
-        city: "Sparks",
-        state: "Nevada",
-        zip: 89436
+      address1: "43 Cody Lane",
+      address2: "Apt #303",
+      city: "Sparks",
+      state: "Nevada",
+      zip: 89436
     },
     {
       first: "Desdemona",
@@ -452,12 +431,11 @@ function seedUsers(communities) {
       phone: "(651)9609187",
       email: "dduchatelm@google.co.jp",
       password: "pANrWlACHhD1",
-      
-        address1: "8788 Vahlen Alley",
-        address2: "31 Mallory Plaza",
-        city: "Minneapolis",
-        state: "Minnesota",
-        zip: 55417
+      address1: "8788 Vahlen Alley",
+      address2: "Apt #203",
+      city: "Minneapolis",
+      state: "Minnesota",
+      zip: 55417
     },
     {
       first: "Wileen",
@@ -469,12 +447,11 @@ function seedUsers(communities) {
       phone: "(952)2563042",
       email: "wbeldamn@hp.com",
       password: "5N7sXPW",
-      
-        address1: "1 Lighthouse Bay Junction",
-        address2: "7 Anhalt Drive",
-        city: "Young America",
-        state: "Minnesota",
-        zip: 55564
+      address1: "1 Lighthouse Bay Junction",
+      address2: "Apt #103",
+      city: "Young America",
+      state: "Minnesota",
+      zip: 55564
     },
     {
       first: "Brennan",
@@ -486,12 +463,11 @@ function seedUsers(communities) {
       phone: "(352)3615703",
       email: "bhuniwallo@fotki.com",
       password: "XU515qR0",
-      
-        address1: "03 Bunting Street",
-        address2: "29 Homewood Parkway",
-        city: "Ocala",
-        state: "Florida",
-        zip: 34479
+      address1: "03 Bunting Street",
+      address2: "Apt #302",
+      city: "Ocala",
+      state: "Florida",
+      zip: 34479
     },
     {
       first: "Eula",
@@ -503,12 +479,11 @@ function seedUsers(communities) {
       phone: "(623)9596777",
       email: "eslyp@is.gd",
       password: "NaNjNjBO",
-      
-        address1: "732 Mccormick Drive",
-        address2: "9320 Almo Park",
-        city: "Glendale",
-        state: "Arizona",
-        zip: 85305
+      address1: "732 Mccormick Drive",
+      address2: "Apt #202",
+      city: "Glendale",
+      state: "Arizona",
+      zip: 85305
     },
     {
       first: "Zabrina",
@@ -520,12 +495,11 @@ function seedUsers(communities) {
       phone: "(316)1374096",
       email: "zcrepinq@globo.com",
       password: "ARgDktqmJ83",
-      
-        address1: "23831 Dakota Hill",
-        address2: "0750 Knutson Center",
-        city: "Wichita",
-        state: "Kansas",
-        zip: 67230
+      address1: "23831 Dakota Hill",
+      address2: "Apt #102",
+      city: "Wichita",
+      state: "Kansas",
+      zip: 67230
     },
     {
       first: "Cary",
@@ -537,12 +511,11 @@ function seedUsers(communities) {
       phone: "(309)2514634",
       email: "cthiemer@jalbum.net",
       password: "Zv2aGbi9Ypk",
-      
-        address1: "1 Old Gate Way",
-        address2: "24488 Summer Ridge Lane",
-        city: "Peoria",
-        state: "Illinois",
-        zip: 61651
+      address1: "1 Old Gate Way",
+      address2: "Apt #301",
+      city: "Peoria",
+      state: "Illinois",
+      zip: 61651
     },
     {
       first: "Terrye",
@@ -554,12 +527,11 @@ function seedUsers(communities) {
       phone: "(713)8808442",
       email: "tcostins@geocities.com",
       password: "4q0YdNw8P",
-      
-        address1: "60946 Ronald Regan Hill",
-        address2: "34 Bobwhite Circle",
-        city: "Houston",
-        state: "Texas",
-        zip: 77080
+      address1: "60946 Ronald Regan Hill",
+      address2: "Apt #101",
+      city: "Houston",
+      state: "Texas",
+      zip: 77080
     },
     {
       first: "Olag",
@@ -571,12 +543,11 @@ function seedUsers(communities) {
       phone: "(513)7115853",
       email: "ostroobandt@msu.edu",
       password: "CnFJ23Wn4jO1",
-      
-        address1: "0148 Graceland Pass",
-        address2: "50 Spohn Terrace",
-        city: "Cincinnati",
-        state: "Ohio",
-        zip: 45203
+      address1: "0148 Graceland Pass",
+      address2: "Apt #201",
+      city: "Cincinnati",
+      state: "Ohio",
+      zip: 45203
     }
   
   ]
