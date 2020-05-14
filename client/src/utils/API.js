@@ -14,6 +14,9 @@ export default {
   AllUsers: function() {
     return axios.get("/api/user/getall");
   },
+  CreateNewUser:function(req){
+    return axios.post("/api/user/register",req);
+  },
   AllCommunity: function() {
     return axios.get("/api/community");
   },

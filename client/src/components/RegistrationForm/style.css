@@ -29,4 +29,6 @@
 col {
     display: inline-block;
 }
-
+.form-check{
+    padding-left: 2.25rem;
+}

@@ -4,13 +4,31 @@ import Col from '../Col';
 import Row from '../Row';
 import TextInput from "../TextInput";
 // import GraphBanner from '../BannerImage';
-
 import API from '../../utils/API';
 
 class RegistrationForm extends Component {
     state = {
-        userInfo: [],
-        community: []
+        userInfo: {
+            communityID: "",
+            first: '',
+            last: '',
+            gender: '',
+            phone: '',
+            ageBracket: '',
+            address1: '',
+            address2: '',
+            city: '',
+            state: '',
+            dob: '',
+            email: '',
+            password: '',
+            zip: '',
+            isAdmin: false
+
+
+        },
+        community: [],
+
     };
     componentDidMount() {
         this.GetAllCommunity();
@@ -19,19 +37,44 @@ class RegistrationForm extends Component {
     GetAllCommunity() {
         API.AllCommunity()
             .then((res) => {
-                console.log("All Community", res.data)
-                let allCommunity = res.data.map(community => {
 
-                    return community.name
+                let allCommunity = res.data.map(community => {
+                    return community
                 })
                 this.setState({ community: allCommunity })
-
             })
-
+    }
+    HandleOnChangeForm(e, name) {
+        e.preventDefault();
+        let newUserObj = Object.assign({}, this.state.userInfo);  // creating copy of state variable jasper
+        newUserObj[e.target.name] = e.target.value;
+        this.setState({ userInfo: newUserObj })
 
     }
 
+    HandleOnChangeText = (e, name) => {
+
+        let newUserObj = Object.assign({}, this.state.userInfo);  // creating copy of state variable jasper
+        newUserObj[name] = e.target.value;
+        this.setState({ userInfo: newUserObj })
+
+    }
+
+    // Sening New User information to the database 
+    HandleSubmitForm(e) {
+        e.preventDefault();
+        API.CreateNewUser(this.state.userInfo)
+            .then(res => {
+                console.log("-->>> New User Created Successfully ! <<<--")
+
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+
     render() {
+        // console.log("STATE",this.state);
         return (
             <form className="wrapper mx-auto align-middle">
                 <button id="addEvent" className="btn btn-info custom-color">+ Add Event</button>
@@ -41,10 +84,10 @@ class RegistrationForm extends Component {
                             <div className="input-group-prepend">
                                 <label className="input-group-text" htmlFor="inputGroupSelect01">Community</label>
                             </div>
-                            <select className="custom-select" id="inputGroupSelect01">
-                                <option defaultValue disabled>Choose...</option>
+                            <select className="custom-select" id="inputGroupSelect01" name="communityID" onChange={(e) => { this.HandleOnChangeForm(e) }}>
+                                <option selected disabled>Choose...</option>
                                 {this.state.community.map((community, index) => {
-                                    return <option key={index} value={community}>{community}</option>
+                                    return <option key={index} value={community._id}>{community.name}</option>
                                 })}
                             </select>
                         </div>
@@ -52,44 +95,49 @@ class RegistrationForm extends Component {
                             <div className="input-group-prepend">
                                 <label className="input-group-text" htmlFor="inputGroupSelect01">Age Bracket</label>
                             </div>
-                            <select className="custom-select" id="inputGroupSelect01">
+                            <select className="custom-select" id="inputGroupSelect01" name="ageBracket" onChange={(e) => { this.HandleOnChangeForm(e) }}>
                                 <option defaultValue>Choose...</option>
-                                <option value="1">Senior</option>
-                                <option value="2">Parent</option>
-                                <option value="3">Adult</option>
-                                <option value="4">Youth</option>
+                                <option name="ageBracket" value="senior">Senior</option>
+                                <option value="parent">Parent</option>
+                                <option value="adult">Adult</option>
+                                <option value="youth">Youth</option>
                             </select>
                         </div>
-                        <TextInput id="first-name" placeholder="Jane" labeltext="First Name" />
-                        <TextInput id="phone" placeholder="(404) 300-5000" labeltext="Phone Number" />
-                        <TextInput id="addressOne" placeholder="123 Some Street" labeltext="Address 1" />
-                        <TextInput id="city" placeholder="Atlanta" labeltext="City" />
-                        <TextInput id="state" placeholder="Georgia" labeltext="State" />
+                        <TextInput HandleOnChangeText={this.HandleOnChangeText} id="first-name" placeholder="Jane" name='first' labeltext="First Name" />
+                        <TextInput HandleOnChangeText={this.HandleOnChangeText} id="phone" placeholder="(404) 300-5000" name='phone' labeltext="Phone Number" />
+                        <TextInput HandleOnChangeText={this.HandleOnChangeText} id="addressOne" placeholder="123 Some Street" name="address1" labeltext="Address 1" />
+                        <TextInput HandleOnChangeText={this.HandleOnChangeText} id="city" placeholder="Atlanta" labeltext="City" name="city" />
+                        <TextInput HandleOnChangeText={this.HandleOnChangeText} id="state" placeholder="Georgia" labeltext="State" name='state' />
                     </Col>
                     <Col>
-                        <TextInput id="dateOfBirth" placeholder="05/01/1959" labeltext="Date of Birth" />
+
+                        <TextInput HandleOnChangeText={this.HandleOnChangeText} id="dateOfBirth" type="date" placeholder="05-01-1959" name='dob' labeltext="Date of Birth" />
+
                         <div className="input-group">
-                            <div className="input-group-prepend">
-                                <div className="input-group-text" placeholder="Female">
-                                    <input type="radio" aria-label="Radio button for following text input" />
-                                </div>
+                            <div className="form-check">
+                                <input className="form-check-input" type="radio" name="gender" id="exampleRadios1" value="male" onChange={(e) => { this.HandleOnChangeForm(e) }} />
+                                <label className="form-check-label" htmlFor="gender">
+                                    Male
+                                </label>
                             </div>
-                            <input type="text" className="form-control col-6" aria-label="Text input with radio button" />
-                            <div className="input-group-prepend" id="field">
-                                <div className="input-group-text" placeholder="Male">
-                                    <input type="radio" aria-label="Radio button for following text input" />
-                                </div>
+                            <div className="form-check">
+                                <input className="form-check-input" type="radio" name="gender" id="exampleRadios1" value="female" onChange={(e) => { this.HandleOnChangeForm(e) }} />
+                                <label className="form-check-label" htmlFor="gender">
+                                    Female
+                                    </label>
                             </div>
-                            <input type="text" className="form-control col-6" aria-label="Text input with radio button" />
+
                         </div>
-                        <TextInput id="last-name" placeholder="Smith" labeltext="Last Name" />
-                        <TextInput id="emailTwo" placeholder="Jane_Smith@test.com" labeltext="Email" />
-                        <TextInput id="password" placeholder="******" labeltext="Password" />
-                        <TextInput id="addressTwo" placeholder="Apt 100" labeltext="Address 2" />
-                        <TextInput id="zip" placeholder="30310" labeltext="Zip" />
+
+                        <TextInput HandleOnChangeText={this.HandleOnChangeText} id="last-name" placeholder="Smith" name='last' labeltext="Last Name" />
+                        <TextInput HandleOnChangeText={this.HandleOnChangeText} id="emailTwo" placeholder="Jane_Smith@test.com" name='email' labeltext="Email" />
+                        <TextInput HandleOnChangeText={this.HandleOnChangeText} id="password" placeholder="******" name='password' labeltext="Password" />
+                        <TextInput HandleOnChangeText={this.HandleOnChangeText} id="addressTwo" placeholder="Apt 100" name='address2' labeltext="address 2" />
+                        <TextInput HandleOnChangeText={this.HandleOnChangeText} id="zip" placeholder="30310" type="number" name='zip' labeltext="Zip" />
                     </Col>
                 </Row>
-                <button id="submitResident" className="btn btn-info custom-color">Submit</button>
+                <button id="submitResident" className="btn btn-info custom-color" onClick={(e) => this.HandleSubmitForm(e)}>Submit</button>
+
             </form>
         )
     }
