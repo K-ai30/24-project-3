@@ -8,8 +8,10 @@ import LoginPage from "./components/LoginPage";
 
 import './assets/css/global.css';
 import AllEvents from './components/AllEvents_page/index';
+import AllCommunites from './components/AllCommunities_page';
 import SignUpForm from "./components/SignUpForm";
 import EventForm from "./components/EventForm";
+import UpdateEventForm from "./components/UpdateEventForm";
 import ReportPage from './components/Reports';
 import Footer from "./components/Footer";
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -27,14 +29,16 @@ function App() {
         <Switch>
           <ProtectedRoute exact path="/updateattendance" component={UpdateAttendance}/>
           <ProtectedRoute exact path="/events" component={EventForm}/>
-          <ProtectedRoute exact path="/register" component={RegistrationForm}/>
+          <Route exact path="/events/:id" component={UpdateEventForm}/>
+          <Route exact path="/register" component={RegistrationForm}/>
           <ProtectedRoute exact path="/signup" component={SignUpForm}/>
           <ProtectedRoute exact path="/event" component={EventForm}/>
           <ProtectedRoute exact path="/allevents" component={AllEvents}/>
           <ProtectedRoute exact path="/reports" component={ReportPage}/>
           <ProtectedRoute exact path="/charthistory" component={ChartHistory}/>
           <ProtectedRoute exact path="/dashboard" component={DashboardPage}/>
-          <Route exact path="/" component={LoginPage}/>
+          <ProtectedRoute exact path="/updatecommunities" component={AllCommunites}/>
+          <Route path="/" component={LoginPage}/>
         </Switch>
         <Footer />
       </Router>

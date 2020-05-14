@@ -13,7 +13,8 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.13",
     "passport": "^0.4.1",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "react-datetime-picker": "^3.0.2"
   },
   "devDependencies": {
     "colonize": "^1.0.5",
