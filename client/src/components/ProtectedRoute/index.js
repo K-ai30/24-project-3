@@ -36,13 +36,13 @@ import LoginPage from "../LoginPage";
       const fetchdata =async ()=>{
        const res = await axios.get("/api/auth/isUserLoggedIn");
         if(res.data.loggedIn){
-          console.log("trying ot set state to true!");
+          // console.log("trying ot set state to true!");
           setState({isAuthenticated:true});
         }
       }
       fetchdata();
     }, [])
-    console.log("the state is: "+ state.isAuthenticated);
+    // console.log("the state is: "+ state.isAuthenticated);
     if(state.isAuthenticated){
        return (
         <Route {...rest} render={() => children }/>

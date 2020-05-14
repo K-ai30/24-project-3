@@ -13,7 +13,7 @@ router
   router
   .route("/getall")
   .get(registerUser.findAll)
-  .post(registerUser.create);
+  // .post(registerUser.create);
 
 
 

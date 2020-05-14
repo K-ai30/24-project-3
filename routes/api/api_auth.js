@@ -18,7 +18,7 @@ router.post('/',passport.authenticate("local"),function(req,res){
 
 //api/auth/isUserLoggedIn
 router.get('/isUserLoggedIn',(req,res)=>{
-  console.log(req.user);
+  // console.log(req.user);
   if(req.user){
     res.json({loggedIn:true});
   }
