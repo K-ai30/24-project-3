@@ -17,7 +17,6 @@ router.use("/update_community", UpdateCommunity);
 router.use("/event", event);
 router.use("/chart", chart );
 router.use("/auth",auth);
-
 // console.log('this is our router in api/indx.js', router)
 
 module.exports = router;

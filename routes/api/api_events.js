@@ -3,7 +3,7 @@ const express = require("express")
 const router = express.Router();
 const eventsController = require("../../controllers/eventsController");
 
-// Matches with "/api/events"
+// Matches with "/api/event"
 router
   .route("/")
   .get(eventsController.findAll)

@@ -40,6 +40,7 @@ class AllEvents extends Component {
                 <th scope="col">Event Name</th>
                 <th scope="col">Details</th>
                 <th scope="col">Community Name</th>
+                <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
@@ -50,6 +51,7 @@ class AllEvents extends Component {
                             <td>{event.name}</td>
                             <td>{event.details}</td>
                             <td>{event.communityID.name}</td>
+                            <td> <a href={`/editevents/${event._id}`}><button id="editEvent" className="btn btn-info custom-color editEvent">Edit Event</button></a></td>
                         </tr>
 
                     )
@@ -58,7 +60,7 @@ class AllEvents extends Component {
                 )}
                 
             </tbody>
-            <button id="editEvent" className="btn btn-info custom-color editEvent">Edit Event</button>
+           
         </table>
         </div>
          
