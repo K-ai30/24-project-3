@@ -1,68 +1,64 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import "./style.css";
-import API from '../../utils/API';
-
+import API from "../../utils/API";
 
 class AllEvents extends Component {
- state = {
-    results:[]
- };
- componentDidMount() {
+  state = {
+    results: [],
+  };
+  componentDidMount() {
     this.GetAllEvents();
   }
 
-  GetAllEvents = ()=> {
+  GetAllEvents = () => {
     API.Events()
-      .then((res)=>{
-        console.log('This is result from Database',res.data);
-         this.setState({ results: res.data })
-         console.log(this.state);
+      .then((res) => {
+        console.log("This is result from Database", res.data);
+        this.setState({ results: res.data });
+        console.log(this.state);
       })
-      .catch(err => console.log("This is the ERR",err));
-    
+      .catch((err) => console.log("This is the ERR", err));
   };
 
- render() {
-     return (
-         
-         <div className="container">
-             <div className="alleventform">
-                 <h1>
-                     All Events
-                 </h1>
-
-             </div>
+  render() {
+    return (
+      <div className="container">
+        <div className="alleventform">
+          <h1>ALL EVENTS</h1>
+        </div>
 
         <table className="table table-striped table-dark tableContent">
-            <thead>
-                <tr>
-                <th scope="col">#</th>
-                <th scope="col">Event Name</th>
-                <th scope="col">Details</th>
-                <th scope="col">Community Name</th>
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Event Name</th>
+              <th scope="col">Details</th>
+              <th scope="col">Community Name</th>
+              <th scope="col">Edit</th>
+            </tr>
+          </thead>
+          <tbody>
+            {this.state.results.map((event, index) => {
+              return (
+                <tr key={index}>
+                  <th scope="row">{index + 1}</th>
+                  <td>{event.name}</td>
+                  <td>{event.details}</td>
+                  <td>{event.communityID.name}</td>
+                  <a
+                    id="editEvent"
+                    href="/events"
+                    className="btn btn-info custom-color editEvent"
+                  >
+                    Edit Event
+                  </a>
                 </tr>
-            </thead>
-            <tbody>
-                {this.state.results.map((event,index)=>{
-                    return(
-                        <tr key={index}>
-                            <th scope="row">{index +1}</th>
-                            <td>{event.name}</td>
-                            <td>{event.details}</td>
-                            <td>{event.communityID.name}</td>
-                        </tr>
-
-                    )
-                }
-
-                )}
-                
-            </tbody>
-            <a id="editEvent" href="/events" className="btn btn-info custom-color editEvent">Edit Event</a>
+              );
+            })}
+          </tbody>
         </table>
-        </div>
-         
-     )
+      </div>
+    );
   }
 }
 
