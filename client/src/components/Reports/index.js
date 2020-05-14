@@ -192,7 +192,9 @@ class ReportPage extends Component {
             
           </select>
         </div>
-        <button className="generate" >Generate Report</button>
+        <button className="generate">Generate Report</button>
+        <button className="save">Save Data</button>
+        <button className="download">Download</button>
 
         <div className="wrapperTwo">
           <h2>Report</h2>

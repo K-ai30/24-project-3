@@ -33,7 +33,6 @@ class RegistrationForm extends Component {
     render() {
         return (
             <form className="wrapper mx-auto align-middle">
-                <button id="addEvent" className="btn btn-info custom-color">+ Add Event</button>
                 <Row>
                     <Col>
                         <div className="input-group mb-3" labeltext="Community">
@@ -68,18 +67,14 @@ class RegistrationForm extends Component {
                     <Col>
                         <TextInput id="dateOfBirth" placeholder="05/01/1959" labeltext="Date of Birth" />
                         <div className="input-group">
-                            <div className="input-group-prepend">
-                                <div className="input-group-text" placeholder="Female">
-                                    <input type="radio" aria-label="Radio button for following text input" />
-                                </div>
+                            <div className="form-check">
+                                <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked/>
+                                <label className="form-check-label" for="exampleRadios1">Female</label>
                             </div>
-                            <input type="text" className="form-control col-6" aria-label="Text input with radio button" />
-                            <div className="input-group-prepend" id="field">
-                                <div className="input-group-text" placeholder="Male">
-                                    <input type="radio" aria-label="Radio button for following text input" />
-                                </div>
+                            <div className="form-check">
+                                <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked/>
+                                <label className="form-check-label" for="exampleRadios1">Male</label>
                             </div>
-                            <input type="text" className="form-control col-6" aria-label="Text input with radio button" />
                         </div>
                         <TextInput id="last-name" placeholder="Smith" labeltext="Last Name" />
                         <TextInput id="emailTwo" placeholder="Jane_Smith@test.com" labeltext="Email" />
@@ -88,7 +83,7 @@ class RegistrationForm extends Component {
                         <TextInput id="zip" placeholder="30310" labeltext="Zip" />
                     </Col>
                 </Row>
-                <button id="submitResident" className="btn btn-info custom-color">Submit</button>
+                <button id="submitResident" className="btn btn-info custom-color">+ Add Resident</button>
             </form>
         )
     }
