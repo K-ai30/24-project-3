@@ -24,14 +24,23 @@ class AllEvents extends Component {
 
  render() {
      return (
+         
          <div className="container">
-        <table className="table table-striped table-dark">
+             <div className="alleventform">
+                 <h1>
+                     All Events
+                 </h1>
+
+             </div>
+
+        <table className="table table-striped table-dark tableContent">
             <thead>
                 <tr>
                 <th scope="col">#</th>
                 <th scope="col">Event Name</th>
                 <th scope="col">Details</th>
                 <th scope="col">Community Name</th>
+                <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
@@ -42,6 +51,7 @@ class AllEvents extends Component {
                             <td>{event.name}</td>
                             <td>{event.details}</td>
                             <td>{event.communityID.name}</td>
+                            <td> <a href={`/events/${event._id}`}><button id="editEvent" className="btn btn-info custom-color editEvent">Edit Event</button></a></td>
                         </tr>
 
                     )
@@ -50,6 +60,7 @@ class AllEvents extends Component {
                 )}
                 
             </tbody>
+
         </table>
         </div>
          

@@ -13,11 +13,6 @@
     margin-left: 10px;
 }
 
-#addEvent {
-    float: right;
-    margin: 0;
-}
-
 #addEvent:hover {
     background-color: #3d66b0;
 }

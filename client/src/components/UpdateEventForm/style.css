@@ -3,7 +3,6 @@
 }
 
 .editEvent{
-    margin-left: 10px;
     position: relative; 
     margin-top: 20px;
     margin-bottom: 20px;
@@ -20,4 +19,8 @@
 
 .tableContent{
     margin-top: -8px;
+}
+
+.react-datetime-picker__wrapper{
+    background-color:white;
 }

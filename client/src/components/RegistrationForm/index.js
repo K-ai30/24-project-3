@@ -77,7 +77,6 @@ class RegistrationForm extends Component {
         // console.log("STATE",this.state);
         return (
             <form className="wrapper mx-auto align-middle">
-                <button id="addEvent" className="btn btn-info custom-color">+ Add Event</button>
                 <Row>
                     <Col>
                         <div className="input-group mb-3" labeltext="Community">
