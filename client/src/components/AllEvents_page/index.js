@@ -51,7 +51,7 @@ class AllEvents extends Component {
                             <td>{event.name}</td>
                             <td>{event.details}</td>
                             <td>{event.communityID.name}</td>
-                            <td> <a href={`/editevents/${event._id}`}><button id="editEvent" className="btn btn-info custom-color editEvent">Edit Event</button></a></td>
+                            <td> <a href={`/events/${event._id}`}><button id="editEvent" className="btn btn-info custom-color editEvent">Edit Event</button></a></td>
                         </tr>
 
                     )
