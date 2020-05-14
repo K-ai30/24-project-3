@@ -60,7 +60,7 @@ class AllEvents extends Component {
                 )}
                 
             </tbody>
-           
+
         </table>
         </div>
          
