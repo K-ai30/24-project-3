@@ -11,6 +11,7 @@ const Navbar = () => {
             <button><Link style={{ textDecoration: 'none' }} to="/events">Events</Link></button>
             <button><Link style={{ textDecoration: 'none' }} to="/register">Residents</Link></button>
             <button><Link style={{ textDecoration: 'none' }} to="/reports">Reports</Link></button>
+            <button><Link style={{ textDecoration: 'none' }} to="/charthistory">History</Link></button>
             </div>
         </div>
     )

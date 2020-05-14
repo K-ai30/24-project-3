@@ -14,7 +14,8 @@ import ReportPage from './components/Reports';
 import Footer from "./components/Footer";
 import ProtectedRoute from "./components/ProtectedRoute";
 import DashboardPage from "./components/Dashboard";
-import UpdateAttendance from "./components/Update-attendance"
+import UpdateAttendance from "./components/Update-attendance";
+import ChartHistory from './components/ChartHistory';
 
 
 
@@ -31,6 +32,7 @@ function App() {
           <ProtectedRoute exact path="/event" component={EventForm}/>
           <ProtectedRoute exact path="/allevents" component={AllEvents}/>
           <ProtectedRoute exact path="/reports" component={ReportPage}/>
+          <ProtectedRoute exact path="/charthistory" component={ChartHistory}/>
           <ProtectedRoute exact path="/dashboard" component={DashboardPage}/>
           <Route exact path="/" component={LoginPage}/>
         </Switch>
