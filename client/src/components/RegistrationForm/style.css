@@ -27,3 +27,15 @@ col {
 .form-check{
     padding-left: 2.25rem;
 }
+.alert{
+    margin-top: 20px;
+}
+#DOB{
+    margin-right: .5rem;
+    
+}
+
+#birthday{
+    margin-bottom: 1rem;
+
+}
