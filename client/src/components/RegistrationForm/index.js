@@ -28,6 +28,10 @@ class RegistrationForm extends Component {
 
         },
         community: [],
+        // formErr:false,
+        submitStatus:'',
+        // alertSuccess:'hide',
+        // alertError:'hide'
 
     };
     componentDidMount() {
@@ -66,16 +70,37 @@ class RegistrationForm extends Component {
         API.CreateNewUser(this.state.userInfo)
             .then(res => {
                 console.log("-->>> New User Created Successfully ! <<<--")
+                this.setState({submitStatus:'success'})
 
             })
             .catch(err => {
                 console.log(err)
+                this.setState({submitStatus:'error'})
             })
     }
 
     render() {
-        // console.log("STATE",this.state);
+        console.log("STATE",this.state);
+        
+
+        let alert = "";
+        if(this.state.submitStatus==="error") {
+             alert= <div class= "alert alert-danger"  role="alert">
+                       <p> All fields must be filled  !</p>
+                       <p>Or choose different Email address(email address should be uniq !)</p>
+                    </div>
+            
+        }
+        else if(this.state.submitStatus==="success"){
+             alert= <div class="alert alert-success"  role="alert">
+                 <h5>Success !</h5>
+                 <p>Your user registration was successful.</p>
+                
+            </div>
+        }
+        else{console.log("Fill Out The Form !")}
         return (
+            <React.Fragment>
             <form className="wrapper mx-auto align-middle">
                 <Row>
                     <Col>
@@ -110,7 +135,9 @@ class RegistrationForm extends Component {
                     </Col>
                     <Col>
 
-                        <TextInput HandleOnChangeText={this.HandleOnChangeText} id="dateOfBirth" type="date" placeholder="05-01-1959" name='dob' labeltext="Date of Birth" />
+                        {/* <TextInput HandleOnChangeText={this.HandleOnChangeText} id="dateOfBirth" type="date" placeholder="05-01-1959" name='dob' labeltext="Date of Birth" /> */}
+                        <label for="dob" id="DOB">Date Of Birth: </label>
+                        <input className="form-control" onChange={(e) => { this.HandleOnChangeForm(e) }} name='dob' type="date" id="birthday"></input>
 
                         <div className="input-group">
                             <div className="form-check">
@@ -136,8 +163,10 @@ class RegistrationForm extends Component {
                     </Col>
                 </Row>
                 <button id="submitResident" className="btn btn-info custom-color" onClick={(e) => this.HandleSubmitForm(e)}>Submit</button>
-
+                
+                {alert}
             </form>
+            </React.Fragment>
         )
     }
 }
