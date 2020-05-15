@@ -1,37 +1,31 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import "./style.css";
-import API from '../../utils/API';
-
+import API from "../../utils/API";
 
 class AllEvents extends Component {
- state = {
-    results:[]
- };
- componentDidMount() {
+  state = {
+    results: [],
+  };
+  componentDidMount() {
     this.GetAllEvents();
   }
 
-  GetAllEvents = ()=> {
+  GetAllEvents = () => {
     API.Events()
-      .then((res)=>{
-        console.log('This is result from Database',res.data);
-         this.setState({ results: res.data })
-         console.log(this.state);
+      .then((res) => {
+        console.log("This is result from Database", res.data);
+        this.setState({ results: res.data });
+        console.log(this.state);
       })
-      .catch(err => console.log("This is the ERR",err));
-    
+      .catch((err) => console.log("This is the ERR", err));
   };
 
- render() {
-     return (
-         
-         <div className="container">
-             <div className="alleventform">
-                 <h1>
-                     All Events
-                 </h1>
-
-             </div>
+  render() {
+    return (
+      <div className="container">
+        <div className="alleventform">
+          <h1>ALL EVENTS</h1>
+        </div>
 
         <table className="table table-striped table-dark tableContent">
             <thead>
@@ -62,9 +56,8 @@ class AllEvents extends Component {
             </tbody>
 
         </table>
-        </div>
-         
-     )
+      </div>
+    );
   }
 }
 
