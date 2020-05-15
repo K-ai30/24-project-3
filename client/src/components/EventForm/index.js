@@ -2,52 +2,111 @@ import React, { Component } from 'react';
 import "./style.css";
 import Col from '../Col';
 import Row from '../Row';
-import TextInput from "../TextInput";
-// import GraphBanner from '../BannerImage';
-
+import Axios from 'axios';
+import API from "../../utils/API"
+import DateTimePicker from 'react-datetime-picker';
 class EventForm extends Component {
- state = {
-     title: null,
-     date: '',
- };
+    state = {
+        communites: [],
+        event: {},
+        eventName:"",
+        description:""
+    };
+
+    constructor(props) {
+        super(props);
+        this.changeCommunity = this.changeCommunity.bind(this);
+        this.changeName = this.changeName.bind(this);
+        this.changeDateTime = this.changeDateTime.bind(this);
+        this.changeDescription = this.changeDescription.bind(this);
+    }
+    componentDidMount(){
+        API.AllCommunity().then(res => {
+            this.state.event.dateAndTime = new Date();
+            this.state.communites = res.data;
+            this.setState({...this.state});
+        })
+    }
+    changeCommunity(event){
+        //console.log(this.state.event);
+        this.state.event.communityID = this.state.communites[event.target.value-1]._id;
+        console.log(this.state.communites[event.target.value-1]);
+        this.setState({...this.state})
+    }
+    changeName(event){
+        console.log(event.target.value);
+        this.state.event.name=event.target.value;
+        this.setState({...this.state})
+    }
+    changeDateTime = (date) => {
+        console.log(date);
+        console.log(this.state.event);
+        this.state.event.dateAndTime = date
+        this.setState({...this.state, event:{...this.state.event, dateAndTime:date}  })
+    }
+    changeDescription(event){
+        this.state.event.details=event.target.value;
+        this.setState({ ...this.state })
+    }
+    
+    handleSubmit(event, communityID){
+        event.preventDefault();
+        //console.log(`/api/event/${this.props.match.params.id}`);
+        //console.log("this.state.event.communityID "+this.state.event.communityID);
+
+        const body = {communityID:communityID}
+        console.log(body);
+        Axios({
+            method: 'post',     //put
+            url: `/api/event/`,
+            data: {...this.state.event}
+          }).then(data=> {
+            //for some reason a find one and update is taking a long time to run so this needs to be done to get the data reloaded so let's wait half a second and reload.
+            setTimeout(()=>{this.setState({...this.state})},500)})
+    }
 
  render() {
+     console.log(this.state.event);
      return (
          <form className="wrapper mx-auto align-middle">
             <Row>
                 <Col>
-                <label className="" HTMLfor="inputGroupSelect01">Community</label>
+                <label className="" htmlFor="inputGroupSelect01">Community</label>
 
-                <div className="input-group mb-3" labelText="Community">
+                <div className="input-group mb-3" label="Community">
                 <div className="input-group-prepend">
-                    <label className="input-group-text" HTMLfor="inputGroupSelect01">Community</label>
+                    <label className="input-group-text" htmlFor="inputGroupSelect01">Community</label>
                 </div>
-                <select className="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">Community 1</option>
-                    <option value="2">Community 2</option>
-                    <option value="3">Community 3</option>
-                    <option value="4">Community 4</option>
-                    <option value="5">Community 5</option>
+                <select className="custom-select" id="inputGroupSelect01" onChange={event => {this.changeCommunity(event)}}>
+                    <option selected disabled>Choose...</option>
+                    {this.state.communites.map((community, index)=>{
+                        return <option key={index+1} value={index+1}>{community.name}</option>
+                    })}
+                    
                 </select>
                 </div>
-                    <TextInput id="event" placeholder="1:PM" labelText="Event Time" />
+                <label  >Date And Time</label>
+                <div></div>
+                <DateTimePicker 
+                    onChange={this.changeDateTime}
+                    value={this.state.event.dateAndTime}
+                />
                 </Col>
                 <Col>
-                    <TextInput id="eventName" placeholder="Senior Yoga Class" labelText="Even Name"/>
-                    <TextInput id="evendate" placeholder="05/02/2020" labelText="Event Date"/>
-                  
-                    
+                    <div className="form-group">
+                        <label>Event Name</label>
+                        <input type="text" className="form-control"  onChange={(event) => this.changeName(event)} value={this.state.event.name}/>
+                    </div>                  
                 </Col>
                 
             </Row>
             <Row>
-            <Col>
-            <label className="description" HTMLfor="description">Description</label>
-            <textarea className="descriptionInput" placeholder="Low-impact yoga for senior"></textarea>
+                <Col>
+                    <label className="description" htmlFor="description">Description</label>
+                    <textarea className="descriptionInput"  onChange={(event)=> this.changeDescription(event)} value={this.state.event.details}></textarea>
                 </Col>
             </Row>
-            <button id="submitResident" className="btn btn-info custom-color">+ Add Event</button>
+            <button id="submitResident" className="btn btn-info custom-color" onClick={(event)=> this.handleSubmit(event)}>Create Event</button>
         </form>
      )
   }

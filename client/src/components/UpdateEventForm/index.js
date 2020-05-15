@@ -49,8 +49,9 @@ class UpdateEventForm extends Component {
     }
     changeDateTime = (date) => {
         console.log(date);
+        console.log(this.state.event);
         this.state.event.dateAndTime = date
-        this.setState({ ...this.state })
+        this.setState({...this.state, event:{...this.state.event, dateAndTime:date}  })
     }
     changeDescription(event){
         this.state.event.details=event.target.value;
@@ -74,6 +75,7 @@ class UpdateEventForm extends Component {
     }
 
  render() {
+     console.log(this.state.event);
      return (
          <form className="wrapper mx-auto align-middle">
             <Row>
