@@ -1,3 +1,14 @@
 .table{
     margin-top: 6rem;
 }
+
+.updateTitle{
+    margin-top: 20px;
+    text-align: center;
+    background-color: black;
+    padding: 10px;
+}
+
+.tableUpdate{
+    margin-top: -10px !important;
+}

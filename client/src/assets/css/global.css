@@ -1,5 +1,6 @@
 body {
-    background-image: url("../../images/graphsTwo.png");
+    /* background-image: url("../../images/graphsTwo.png"); */
+    background-image:  url("../../images/Data-Analytics-Certificate.jpg");;
     background-size: cover;
     background-attachment: fixed;
 }

@@ -25,7 +25,7 @@ class UpdateAttendance extends Component {
     return (
       <div className="container">
         <div className="updateAttendance">
-          <h1>UPDATE ATTENDANCE</h1>
+          <h1>Update Attendance</h1>
         </div>
         <table className="table table-striped table-dark tableContent">
           <thead>

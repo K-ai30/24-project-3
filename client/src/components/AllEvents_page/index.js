@@ -28,33 +28,38 @@ class AllEvents extends Component {
         </div>
 
         <table className="table table-striped table-dark tableContent">
-            <thead>
-                <tr>
-                <th scope="col">#</th>
-                <th scope="col">Event Name</th>
-                <th scope="col">Details</th>
-                <th scope="col">Community Name</th>
-                <th scope="col"></th>
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Event Name</th>
+              <th scope="col">Details</th>
+              <th scope="col">Community Name</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            {this.state.results.map((event, index) => {
+              return (
+                <tr key={index}>
+                  <th scope="row">{index + 1}</th>
+                  <td>{event.name}</td>
+                  <td>{event.details}</td>
+                  <td>{event.communityID.name}</td>
+                  <td>
+                    {" "}
+                    <a href={`/events/${event._id}`}>
+                      <button
+                        id="editEvent"
+                        className="btn btn-info custom-color editEvent"
+                      >
+                        Edit Event
+                      </button>
+                    </a>
+                  </td>
                 </tr>
-            </thead>
-            <tbody>
-                {this.state.results.map((event,index)=>{
-                    return(
-                        <tr key={index}>
-                            <th scope="row">{index +1}</th>
-                            <td>{event.name}</td>
-                            <td>{event.details}</td>
-                            <td>{event.communityID.name}</td>
-                            <td> <a href={`/events/${event._id}`}><button id="editEvent" className="btn btn-info custom-color editEvent">Edit Event</button></a></td>
-                        </tr>
-
-                    )
-                }
-
-                )}
-                
-            </tbody>
-
+              );
+            })}
+          </tbody>
         </table>
       </div>
     );
