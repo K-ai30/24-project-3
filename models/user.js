@@ -60,29 +60,10 @@ const UserSchema = new Schema({
       },
       ageBracket:{
         type: String
-      },
-
-        isAdmin: {
-            type: Boolean,
-            trim: true
-        },
-
-        password: {
-            type: String,
-            validate: [({ length }) => length >= 6, "Password should be longer."]
-        }
+      }
 
 });
 
-//before a user is entered into the database encrypt the password.
-UserSchema.pre('save',function (next){
-  this.password = bcrypt.hashSync(this.password, bcrypt.genSaltSync(10), null);
-  next()
-})
-
-UserSchema.methods.comparePassword = function(inputPass) {
-  return bcrypt.compareSync(inputPass,this.password);
-};
 
 
 const User = mongoose.model("User", UserSchema);
