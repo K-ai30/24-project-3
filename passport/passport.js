@@ -12,7 +12,7 @@ passport.use(new LocalStrategy(
   },
   function(email, password, done) {
     // When a user tries to sign in this code runs    
-    db.User.findOne({email:email},function(err,user){
+    db.Admin.findOne({email:email},function(err,user){
       if(err){console.log(err)}
       if (!user) {
         return done(null, false, { message: 'Incorrect username.' });
