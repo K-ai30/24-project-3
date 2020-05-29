@@ -8,8 +8,8 @@ const Navbar = () => {
             <h3>DataTrak</h3>
             <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
             <button><Link style={{ textDecoration: 'none' }} to="/dashboard">Home</Link></button>
-            <button><Link style={{ textDecoration: 'none' }} to="/events">Events</Link></button>
-            <button><Link style={{ textDecoration: 'none' }} to="/register">Residents</Link></button>
+            <button><Link style={{ textDecoration: 'none' }} to="/events">Add Event</Link></button>
+            <button><Link style={{ textDecoration: 'none' }} to="/register">Add Resident</Link></button>
             <button><Link style={{ textDecoration: 'none' }} to="/reports">Reports</Link></button>
             <button><Link style={{ textDecoration: 'none' }} to="/charthistory">History</Link></button>
             </div>
