@@ -29,8 +29,8 @@ function App() {
         <Switch>
           <ProtectedRoute exact path="/updateattendance" component={UpdateAttendance}/>
           <ProtectedRoute exact path="/events" component={EventForm}/>
-          <Route exact path="/events/:id" component={UpdateEventForm}/>
-          <Route exact path="/register" component={RegistrationForm}/>
+          <ProtectedRoute exact path="/events/:id" component={UpdateEventForm}/>
+          <ProtectedRoute exact path="/register" component={RegistrationForm}/>
           <ProtectedRoute exact path="/signup" component={SignUpForm}/>
           <ProtectedRoute exact path="/event" component={EventForm}/>
           <ProtectedRoute exact path="/allevents" component={AllEvents}/>
