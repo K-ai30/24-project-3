@@ -16,13 +16,10 @@ class UpdateAttendance extends Component {
       this.getEvent(this.props.match.params.id).then(res=>{
           this.state.event = res.data;
           API.AllUsers().then(residents => {
-              let commID = this.state.event.communityID;
-              console.log("residents");
-              console.log(residents.data);
+              let commID = this.state.event.communityID._id;
               let arr = residents.data.filter(resident => {
                 return commID === resident.communityID._id;
               });
-              console.log(arr);
               this.setState({...this.state,residents:arr});
           })
       })
@@ -43,7 +40,6 @@ class UpdateAttendance extends Component {
       }
 
     }
-    console.log(newEvent);
     Axios.put(`/api/event/${this.props.match.params.id}`,{usersAttended: newEvent.usersAttended } ).then(res =>{
       this.setState({...this.state, event: newEvent})
     })
@@ -52,14 +48,12 @@ class UpdateAttendance extends Component {
 
   }
   render() {
-    console.log(this.state);
-    console.log(this.state.event);
-    console.log(this.state.residents);
-    
     return (
       <div className="container">
         <div className="updateAttendance">
           <h1>UPDATE ATTENDANCE</h1>
+          <h4>{this.state.event.name} - <span>{this.state.event.communityID ? this.state.event.communityID.name : undefined}</span></h4>
+          
         </div>
         <table className="table table-striped table-dark tableContent">
           <thead>

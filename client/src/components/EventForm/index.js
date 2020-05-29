@@ -69,6 +69,9 @@ class EventForm extends Component {
      console.log(this.state.event);
      return (
          <form className="wrapper mx-auto align-middle">
+                <div id="addEventTitle">
+                    <h1>ADD EVENT</h1>
+                </div>
             <Row>
                 <Col>
                 <label className="" htmlFor="inputGroupSelect01">Community</label>

@@ -3,6 +3,7 @@ import './style.css';
 import Chart from '../Charts';
 import API from '../../utils/API';
 import html2canvas from "html2canvas";
+import Axios from 'axios';
 const pdfConverter = require("jspdf");
 
 
@@ -122,6 +123,41 @@ class ReportPage extends Component {
             });
 
         }
+  RenderChartByAttendance(res, communityID, communityName){
+    
+    let communityResidents = res.data.filter(resident=>{ return communityID === resident.communityID._id }).length;
+    let allResidents = 0;
+    let residentsAttended =0 ;
+    console.log(res);
+    Axios.get("/api/event").then(events =>{
+       events.data.forEach(event => {
+        if(communityID === event.communityID._id){
+          residentsAttended += event.usersAttended.length;
+          allResidents += communityResidents;
+        }
+      })
+      this.setState(
+        {chartData: {
+          communityID:communityID,
+          communityName:communityName,
+          labels: ["All Residents","Residents Attended"],
+          datasets: [
+            {
+              label: ["attendance"],
+              data: [allResidents,residentsAttended],
+              backgroundColor:this.state.chartData.datasets[0].backgroundColor
+             
+            }
+          ]
+  
+        }
+        });
+    })
+
+
+
+
+  }
    
   // getting all users from database
   GetAllUsers = (communityID,category,communityName) => {
@@ -135,6 +171,10 @@ class ReportPage extends Component {
             }
             else if(category==="gender"){
               this.RenderChartByGender(res, communityID,communityName)
+            }
+            else if (category==="attendance"){
+              this.RenderChartByAttendance(res,communityID, communityName)
+
             }
 
       })
@@ -226,8 +266,11 @@ class ReportPage extends Component {
 
    
     return (
-      
+
       <form  onSubmit={(e)=>this.HandleReportBtn(e)} className="wrapper mx-auto align-middle">
+        <div id="reportTitle">
+          <h1>Reports</h1>
+        </div>
         <div className="form-group">
           <label htmlFor="exampleFormControlSelect1">Community</label>
           <select className="form-control" id="exampleFormControlSelect1" >
@@ -246,6 +289,7 @@ class ReportPage extends Component {
              <option selected disabled key="1" >Choose ...</option>
              <option key="2" value="ageBracket">AgeBracket</option>
              <option key="3"  value="gender">Gender</option>
+             <option key="4"  value="attendance">Attendance</option>
             
             
           </select>
@@ -255,7 +299,6 @@ class ReportPage extends Component {
         <button className="download">Download</button>
 
         <div className="wrapperTwo">
-          <h2>Report</h2>
           <Chart type="pie" label={this.state.chartData.datasets.label} data={this.state.chartData} />
           {/* <canvas id="myChart" width="300" height="300"> */}
           {/* <Chart/> */}

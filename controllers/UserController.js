@@ -1,9 +1,23 @@
 const db = require("../models/index");
 
 
-
 module.exports = {
-  
+  findAll: function(req, res) {
+    
+    db.User
+      .find(req.query)
+      .populate("communityID")
+      .sort({ date: -1 })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+ 
+  create: function(req, res) {
+    db.User
+      .create(req.body)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
   update: function(req, res) {
     db.User
       .findOneAndUpdate({ _id: req.params.id }, req.body)
@@ -22,5 +36,12 @@ module.exports = {
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+  },
+  findByCommunityID: function (req,res){
+    db.User
+    .find({communityID:req.params.communityID})
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
   }
+
 };

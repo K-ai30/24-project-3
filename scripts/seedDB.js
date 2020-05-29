@@ -30,35 +30,35 @@ function seedEvents(communities, users) {
       dateAndTime: Date.now(),
       details: "a class for the older crowd",
       communityID: communities[getRandomIndex(communities)],
-      usersAttended: [users[0]]
+      usersAttended: []
     },
     {
       name: "teen movie night",
       dateAndTime: Date.now(),
       details: "watch frozen 2",
       communityID: communities[getRandomIndex(communities)],
-      usersAttended: [users[0]]
+      usersAttended: []
     },
     {
       name: "family art class",
       dateAndTime: Date.now(),
       details: "paint with the kids",
       communityID: communities[getRandomIndex(communities)],
-      usersAttended: [users[0]]
+      usersAttended: []
     },
     {
       name: "community pool party",
       dateAndTime: Date.now(),
       details: "bbq, pool, swimming and music",
       communityID: communities[getRandomIndex(communities)],
-      usersAttended: [users[0]]
+      usersAttended: []
     },
     {
       name: "community meeting",
       dateAndTime: Date.now(),
       details: "Community updates",
       communityID: communities[getRandomIndex(communities)],
-      usersAttended: [users[0]]
+      usersAttended: []
     }
   ]
   return db.Event.create(...eventSeed)

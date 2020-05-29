@@ -3,3 +3,12 @@
     background-color: beige;
     text-align: center;
 }
+
+
+#chartHistoryTitle{
+    margin-top: 10px;
+    text-align: center;
+    color: cornsilk !important;
+   padding: 20px;
+
+}
