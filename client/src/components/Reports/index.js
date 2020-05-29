@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './style.css';
 import Chart from '../Charts';
 import API from '../../utils/API';
+import html2canvas from "html2canvas";
+const pdfConverter = require("jspdf");
 
 
 class ReportPage extends Component {
@@ -172,6 +174,36 @@ class ReportPage extends Component {
 
   }
   
+  div2PDF = e => {
+    // const but = e.target;
+    // but.style.display = "none";
+    let input = window.document.getElementsByClassName("wrapperTwo")[0];
+
+    console.log(input.children);
+
+    const inputCanvas = input.children[1];
+    html2canvas(input, 
+    { 
+      windowWidth: 1000, 
+      windowHeight: 1000,
+    }
+    ).then(canvas => {
+        const img = canvas.toDataURL("image/png");
+        console.log(img);
+        const pdf = new pdfConverter("1", "pt");
+        pdf.addImage(
+            img,
+            "png",
+            input.offsetLeft,
+            input.offsetTop,
+            input.scrollWidth,
+            input.scrollHeight
+        );
+        pdf.save("chart.pdf");
+        // but.style.display = "block";
+    });
+};
+
   render() {
     
     let alert = "";

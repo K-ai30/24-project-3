@@ -93,7 +93,7 @@ export default class ChartHistory extends Component {
                         </select>
                 </div>
                     <button className="generate" >Generate</button>
-                <div className="wrapperThree">
+                <div className="wrapperThree">Chart History
                 </div>
                 <div className="wrapperTwo">
                     <h5>Category : <span id="title"></span></h5>

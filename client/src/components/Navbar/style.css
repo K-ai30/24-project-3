@@ -9,11 +9,12 @@ button {
 
 .custom-shade {
     background-color: #333;
+    background-color: rgb(8, 0, 77);
 }
 
 h3 {
     color: #ffffff;
-}
+} 
 
 button, Link {
     margin: 2px;

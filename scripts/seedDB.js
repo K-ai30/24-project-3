@@ -76,7 +76,6 @@ function seedUsers(communities) {
       gender: "Male",
       phone: "(336)1286101",
       email: "imackrell0@dell.com",
-      password: "tnQVU7uWva5P",
       address1: "43 Kedzie Crossing",
       address2: "Apt #208",
       city:"Winston Salem",
@@ -92,7 +91,6 @@ function seedUsers(communities) {
       gender: "Female",
       phone: "(810)9765505",
       email: "lovitz1@imgur.com",
-      password: "4KdLRPt7h",
       address1: "72283 Holy Cross Street",
       address2: "Apt #108", 
       city: "Southfield",
@@ -109,7 +107,6 @@ function seedUsers(communities) {
       gender: "Female", 
       phone: "(202)3582310",
       email: "kjohnsee2@oakley.com",
-      password: "cL6HtX2c",
       address1: "7291 Sauthoff Parkway",
       address2: "Apt #407",
       city: "Washington",
@@ -126,7 +123,6 @@ function seedUsers(communities) {
       gender: "Male",
       phone: "(330)1278507",
       email: "wpavlenkov3@w3.org",
-      password: "ZLF5Tvk5rch",
       address1: "86 Basil Place", 
       address2: "Apt #307",
       city: "Youngstown",
@@ -142,7 +138,6 @@ function seedUsers(communities) {
       gender: "Female",
       phone: "(713)1768185",
       email: "adelacourt4@addthis.com",
-      password: "ucszXagz",
       address1: "61953 Sullivan Park",
       address2: "Apt #207",
       city: "Houston",
@@ -158,7 +153,6 @@ function seedUsers(communities) {
       gender: "Male",
       phone: "(319)6202221",
       email: "crobbeke5@disqus.com",
-      password: "0xoIoP6VUV",
       address1: "8122 Barnett Circle",
       address2: "Apt #107",
       city: "Iowa City",
@@ -174,7 +168,6 @@ function seedUsers(communities) {
       gender: "Male",
       phone: "(928)4094206",
       email: "fbeane6@fotki.com",
-      password: "5h1Gyj2WKCW",
       address1: "4 Hauk Drive",
       address2: "Apt #406",
       city: "Prescott",
@@ -190,7 +183,6 @@ function seedUsers(communities) {
       gender: "Male",
       phone: "(240)8860036",
       email: "rgatesman7@mlb.com",
-      password: "w1VTeiZ",
       address1: "70939 Holy Cross Way",
       address2: "Apt #206", 
       city: "Frederick",
@@ -206,7 +198,6 @@ function seedUsers(communities) {
       gender: "Female",
       phone: "(818)4260007",
       email: "minsole8@amazonaws.com",
-      password: "u3A0up8F4q",
       address1: "02900 Barby Trail",
       address2: "Apt #306",
       city: "Pasadena",
@@ -222,7 +213,6 @@ function seedUsers(communities) {
       gender: "Female",
       phone: "(202)6988843",
       email: "lwardley9@tiny.cc",
-      password: "7xEszoIEOVv",
       address1: "8602 Westridge Point",
       address2: "Apt #106",
       city: "Washington",
@@ -238,7 +228,6 @@ function seedUsers(communities) {
       gender: "Male",
       phone: "(973)8124579",
       email: "scursonsa@nytimes.com",
-      password: "NRbHu5dT5Pu",
       address1: "87148 Norway Maple Terrace",
       address2: "Apt #405",
       city: "Jersey City",
@@ -254,7 +243,6 @@ function seedUsers(communities) {
       gender: "Male",
       phone: "(703)9893793",
       email: "mcatchesideb@opera.com",
-      password: "5h9bEoam8",
       address1: "3223 Petterle Drive",
       address2: "Apt #305",
       city: "Washington",
@@ -270,7 +258,6 @@ function seedUsers(communities) {
       gender: "Female",
       phone: "(304)7989663",
       email: "jpenvarnec@ed.gov",
-      password: "JYVlonyRuAoU",
       address1: "7916 Forest Dale Parkway",
       address2: "Apt #205",
       city: "Charleston",
@@ -286,7 +273,6 @@ function seedUsers(communities) {
       gender: "Female",
       phone: "(325)8977061",
       email: "destcourtd@hibu.com",
-      password: "eh4NRwF0i",
       address1: "709 Doe Crossing Hill",
       address2: "Apt #105",
       city: "Abilene",
@@ -302,7 +288,6 @@ function seedUsers(communities) {
       gender: "Female",
       phone: "(808)9755489",
       email: "adecastrie@networksolutions.com",
-      password: "FB2zCd",
       address1: "63260 Brentwood Terrace",
       address2: "Apt #404",
       city: "Honolulu",
@@ -318,7 +303,6 @@ function seedUsers(communities) {
       gender: "Male",
       phone: "(808)2768430",
       email: "ohubbuckef@spotify.com",
-      password: "rjpeIqqHwN",
       address1: "12289 Pawling Junction",
       address2: "Apt #304",
       city: "Honolulu",
@@ -334,7 +318,6 @@ function seedUsers(communities) {
       gender: "Female",
       phone: "(510)7165686",
       email: "ajanosevicg@independent.co.uk",
-      password: "jnQcX6LpJs",
       address1: "70 Forest Alley",
       address2: "Apt #204",
       city: "Richmond",
@@ -350,7 +333,6 @@ function seedUsers(communities) {
       gender: "Female",
       phone: "(434)4324080",
       email: "wbrockieh@squidoo.com",
-      password: "RQ6atFiNi",
       address1: "843 Old Shore Lane",
       address2: "Apt #104",
       city: "Lynchburg",
@@ -366,7 +348,6 @@ function seedUsers(communities) {
       gender: "Male",
       phone: "(318)8511388",
       email: "aollingtoni@sitemeter.com",
-      password: "z2cLXVc",
       address1: "7 Bashford Pass",
       address2: "Apt #403",
       city: "Boston",
@@ -382,7 +363,6 @@ function seedUsers(communities) {
       gender: "Female",
       phone: "(313)8284648",
       email: "ocurtonj@1und1.de",
-      password: "ccBrvJbw",
       address1: "0143 Kedzie Drive",
       address2: "Apt #401",
       city: "Detroit",
@@ -398,7 +378,6 @@ function seedUsers(communities) {
       gender: "Male",
       phone: "(323)5718019",
       email: "egutersonk@ftc.gov",
-      password: "76N5S7Bzlv",
       address1: "78503 Alpine Trail",
       address2: "Apt #402",
       city: "Los Angeles",
@@ -414,7 +393,6 @@ function seedUsers(communities) {
       gender: "Male",
       phone: "(775)6090863",
       email: "jfeltonl@sfgate.com",
-      password: "4VEAY9bBSo",
       address1: "43 Cody Lane",
       address2: "Apt #303",
       city: "Sparks",
@@ -430,7 +408,6 @@ function seedUsers(communities) {
       gender: "Female",
       phone: "(651)9609187",
       email: "dduchatelm@google.co.jp",
-      password: "pANrWlACHhD1",
       address1: "8788 Vahlen Alley",
       address2: "Apt #203",
       city: "Minneapolis",
@@ -446,7 +423,6 @@ function seedUsers(communities) {
       gender: "Female",
       phone: "(952)2563042",
       email: "wbeldamn@hp.com",
-      password: "5N7sXPW",
       address1: "1 Lighthouse Bay Junction",
       address2: "Apt #103",
       city: "Young America",
@@ -462,7 +438,6 @@ function seedUsers(communities) {
       gender: "Male",
       phone: "(352)3615703",
       email: "bhuniwallo@fotki.com",
-      password: "XU515qR0",
       address1: "03 Bunting Street",
       address2: "Apt #302",
       city: "Ocala",
@@ -478,7 +453,6 @@ function seedUsers(communities) {
       gender: "Female",
       phone: "(623)9596777",
       email: "eslyp@is.gd",
-      password: "NaNjNjBO",
       address1: "732 Mccormick Drive",
       address2: "Apt #202",
       city: "Glendale",
@@ -494,7 +468,6 @@ function seedUsers(communities) {
       gender: "Female",
       phone: "(316)1374096",
       email: "zcrepinq@globo.com",
-      password: "ARgDktqmJ83",
       address1: "23831 Dakota Hill",
       address2: "Apt #102",
       city: "Wichita",
@@ -510,7 +483,6 @@ function seedUsers(communities) {
       gender: "Female",
       phone: "(309)2514634",
       email: "cthiemer@jalbum.net",
-      password: "Zv2aGbi9Ypk",
       address1: "1 Old Gate Way",
       address2: "Apt #301",
       city: "Peoria",
@@ -526,7 +498,6 @@ function seedUsers(communities) {
       gender: "Female",
       phone: "(713)8808442",
       email: "tcostins@geocities.com",
-      password: "4q0YdNw8P",
       address1: "60946 Ronald Regan Hill",
       address2: "Apt #101",
       city: "Houston",
@@ -542,7 +513,6 @@ function seedUsers(communities) {
       gender: "Male",
       phone: "(513)7115853",
       email: "ostroobandt@msu.edu",
-      password: "CnFJ23Wn4jO1",
       address1: "0148 Graceland Pass",
       address2: "Apt #201",
       city: "Cincinnati",
@@ -554,21 +524,35 @@ function seedUsers(communities) {
   return db.User.create(...residentSeed)
 }
 
+function seedAdmins(){
+
+  admins = [
+    {first:"scotty", last:"mikul", email:"scotty@gmail.com", password:"password"},
+    {first:"Ad",last:"min", email:"admin@gmail.com", password:"password"}
+  ]
+  return db.Admin.create(...admins);
+}
 //still have to populate the charts
 Promise.all([
   db.Community.remove({}),
   db.User.remove({}),
   db.Chart.remove({}),
-  db.Event.remove({})
+  db.Event.remove({}),
+  db.Admin.remove({})
 ])
   .then(() => {
     db.Community.create(...communitySeed)
       .then((communities) => {
         seedUsers(communities)
           .then(
-            (users) => { seedEvents(communities, users).then(()=>{
+            (users) => { seedEvents(communities, users).then((err)=>{
               if (err){ console.log(err)}
-              process.exit(0)
+              seedAdmins().then((err)=>{
+                if(err){
+                  console.log(err);   
+                  process.exit(0)
+                }
+              })
             })}
           )
       })
