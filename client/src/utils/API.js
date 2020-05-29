@@ -5,11 +5,14 @@ export default {
   Events: function() {
     return axios.get('/api/event');
   },
-  Chart: function(id) {
+  ChartById: function(id) {
     return axios.get(`/api/chart/${id}`);
   },
   AllCharts: function() {
-    return axios.get("/api/chart/allcharts");
+    return axios.get("/api/chart/getall");
+  },
+  createChart:function(req){
+    return axios.post("/api/chart/create",req);
   },
   AllUsers: function() {
     return axios.get("/api/user/getall");

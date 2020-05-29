@@ -11,6 +11,8 @@ class ReportPage extends Component {
     state ={
       
         chartData: {
+          communityID:'',
+          communityName:'',
           labels: [],
           datasets: [
             {
@@ -21,12 +23,11 @@ class ReportPage extends Component {
           ]
 
         },
-        formData:[]
+        formData:[],
+        alert:''
     }
   
   componentDidMount() {
-    // this.GetChartByID();
-    // this.GetAllUsers();
     this.GetDataForInputForm();
   }
 
@@ -52,33 +53,8 @@ class ReportPage extends Component {
  
 }
 
-  GetChartByID = (id) => {
-    
-    API.Chart(id)
-      .then((res) => {
-        // console.log('This is Chart result from Database', res.data);
-        // console.log('This is DATA from Database:', res.data.data);
 
-        // this.setState(
-        //   {chartData: {
-        //     labels: [res.data.category],
-        //     datasets: [
-        //       {
-        //         label: res.data.category,
-        //         data: res.data.data,
-        //         backgroundColor:this.state.chartData.datasets[0].backgroundColor
-        //         // ["#FF6384", "#36A2EB", "#FFCE56", "#6610f2", "#fd7e14", "#28a745", "#6f42c1"]
-        //       }
-        //     ]
-
-        //   }
-        //   });
-
-      })
-      .catch(err => console.log("This is the ERR", err));
-  };
-
-  RenderChartByAgeBracket(res,communityID){
+  RenderChartByAgeBracket(res,communityID,communityName){
     let seniorCount=0;
     let youthCount=0;
     let adultCount=0;
@@ -100,6 +76,8 @@ class ReportPage extends Component {
     })
     this.setState(
       {chartData: {
+        communityID:communityID,
+        communityName:communityName,
         labels: ["Senior","Youth","Adult","Parent"],
         datasets: [
           {
@@ -111,9 +89,10 @@ class ReportPage extends Component {
         ]
       }
       });
+
   }
 
-  GetChartByGender(res,communityID){
+  RenderChartByGender(res,communityID,communityName){
           let Male=0;
           let Female=0;
           res.data.forEach(user=>{
@@ -127,6 +106,8 @@ class ReportPage extends Component {
           })
           this.setState(
             {chartData: {
+              communityID:communityID,
+              communityName:communityName,
               labels: ["Male","Female"],
               datasets: [
                 {
@@ -139,32 +120,58 @@ class ReportPage extends Component {
   
             }
             });
+
         }
    
   // getting all users from database
-  GetAllUsers = (communityID,category) => {
+  GetAllUsers = (communityID,category,communityName) => {
     
     API.AllUsers()
       .then((res) => {
 
             if(category==="ageBracket"){
-              this.RenderChartByAgeBracket(res, communityID)
+              this.RenderChartByAgeBracket(res, communityID,communityName)
+              
             }
             else if(category==="gender"){
-              this.GetChartByGender(res, communityID)
+              this.RenderChartByGender(res, communityID,communityName)
             }
 
       })
       .catch(err => console.log("This is the ERR", err));
   }
 
-  HandleReportBtn(e){
+  HandleReportBtn(e,name){
     e.preventDefault();
     let communityID=e.target[0].value;
+    let communityName=e.target[0].name;
     let category=e.target[1].value;
-   
-    this.GetAllUsers(communityID,category);
+    console.log("Community Name :",communityName);
+    console.log("Community ID :",communityID);
+    this.GetAllUsers(communityID,category,communityName);
     console.log("STATE",this.state)
+  }
+  HandleSaveChart(e){
+    e.preventDefault();
+    
+
+    const chartData={
+      category:this.state.chartData.datasets[0].label,
+      communityID:this.state.chartData.communityID,
+      data:this.state.chartData.datasets[0].data,
+      labels:this.state.chartData.labels,
+      backgroundColor:this.state.chartData.datasets[0].backgroundColor,
+    }
+   
+    API.createChart(chartData).then((res)=>{
+      console.log("CHART CREATED !",res)
+      this.setState({alert:"success"})
+    }).catch(err =>{
+
+       console.log("This is the ERR", err);
+        this.setState({alert:"error"})
+    })
+
   }
   
   div2PDF = e => {
@@ -198,35 +205,54 @@ class ReportPage extends Component {
 };
 
   render() {
+    
+    let alert = "";
+    if(this.state.alert==="error") {
+         alert= <div class= "alert alert-danger"  role="alert">
+                   <p> Error!</p>
+                   <p>First generate the form, then click on SAVE button!</p>
+                </div>
+        
+    }
+    else if(this.state.alert==="success"){
+         alert= <div class="alert alert-success"  role="alert">
+             <h5>Success !</h5>
+             <p>Chart Data Saved.</p>
+            
+        </div>
+    }
+    else{console.log("Fill Out The Form and click on generate Report button .")}
+    
 
    
     return (
+      
       <form  onSubmit={(e)=>this.HandleReportBtn(e)} className="wrapper mx-auto align-middle">
         <div className="form-group">
           <label htmlFor="exampleFormControlSelect1">Community</label>
           <select className="form-control" id="exampleFormControlSelect1" >
-            <option>All Communities</option>
+            <option>Choose ...</option>
             {this.state.formData.map((community,index)=>{
              
-              return <option key={index} name= {community.community.name} value={community.community.id}>{community.community.name}</option>
+              return <option key={index} name={community.community.name} value={community.community.id}>{community.community.name}</option>
             })}
            
           </select>
         </div>
         <div className="form-group">
-          <label htmlFor="exampleFormControlSelect1">Category</label>
-          <select className="form-control" id="exampleFormControlSelect1">
+          <label htmlFor="exampleFormControlSelect2">Category</label>
+          <select className="form-control" id="exampleFormControlSelect2">
               
-             <option selected disabled key="1" name= "category" value="ageBracket">Choose ...</option>
-             <option key="2" name= "category" value="ageBracket">AgeBracket</option>
-             <option key="3" name= "gender" value="gender">Gender</option>
+             <option selected disabled key="1" >Choose ...</option>
+             <option key="2" value="ageBracket">AgeBracket</option>
+             <option key="3"  value="gender">Gender</option>
             
             
           </select>
         </div>
         <button className="generate">Generate Report</button>
-        <button className="save">Save Data</button>
-        <button className="download" onClick={this.div2PDF}>Download</button>
+        <button className="save" onClick={(e)=>this.HandleSaveChart(e)}>Save Chart</button>
+        <button className="download">Download</button>
 
         <div className="wrapperTwo">
           <h2>Report</h2>
@@ -235,7 +261,9 @@ class ReportPage extends Component {
           {/* <Chart/> */}
           {/* </canvas> */}
         </div>
+        {alert}
       </form>
+       
     )
   }
 }

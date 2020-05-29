@@ -8,22 +8,29 @@ const ChartSchema = new Schema({
         type: Date, default: Date.now
     },
     category:{
-        type:String
+        type:[String],
+        required:true
     },
     communityID:{
         type: Schema.Types.ObjectId,
         ref: "Community"   
     },
     data:{
-        type:[Number]
-    },
-    labels:{
-        type:[String]
+        type:[Number],
+        required:true
 
     },
-    datasetLabel:{
-        type:String
-    }
+    labels:{
+        type:[String],
+        required:true
+
+
+    },
+    backgroundColor:{
+        type:[String],
+        required:true
+
+    }    
 
 });
 
