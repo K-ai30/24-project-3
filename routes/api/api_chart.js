@@ -8,10 +8,15 @@ router
   .route("/create")
   .post(createChart.create);
 
-  // Matches with "/chart/allcharts"
+  // Matches with "/chart/getall"
 router
-.route("/allcharts")
+.route("/getall")
 .get(createChart.findAll)
+
+  // Matches with "/chart/findone"
+  router
+  .route("/:id")
+  .get(createChart.findById)
 
 
 
