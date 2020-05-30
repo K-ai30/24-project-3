@@ -1,7 +1,6 @@
 const express = require("express")
 const router = express.Router();
-const registerUser = require("./api_registerUser");
-const updateUser = require("./api_updateUser");
+const registerUser = require("./api_user");
 const admin = require("./api_registerAdmin");
 const community = require("./api_community");
 const UpdateCommunity = require("./api_UpdateCommunity");
@@ -10,7 +9,7 @@ const chart = require("./api_chart");
 const auth = require("./api_auth");
 // App routes
 router.use("/user", registerUser);
-router.use("/update_user", updateUser);
+router.use("/update_user", registerUser);
 router.use("/admin", admin);
 router.use("/community", community);
 router.use("/update_community", UpdateCommunity);

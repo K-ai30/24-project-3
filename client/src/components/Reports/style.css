@@ -16,3 +16,12 @@
 .download {
     color: white;
 }
+
+
+#reportTitle{
+    margin-top: 10px;
+    text-align: center;
+    color: cornsilk !important;
+   padding: 20px;
+
+}

@@ -35,6 +35,7 @@ class AllEvents extends Component {
                 <th scope="col">Details</th>
                 <th scope="col">Community Name</th>
                 <th scope="col"></th>
+                <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
@@ -46,6 +47,7 @@ class AllEvents extends Component {
                             <td>{event.details}</td>
                             <td>{event.communityID.name}</td>
                             <td> <a href={`/events/${event._id}`}><button id="editEvent" className="btn btn-info custom-color editEvent">Edit Event</button></a></td>
+                            <td> <a href={`/updateattendance/${event._id}`}><button id="updateAttendance" className="btn btn-info custom-color editEvent">Update Attendance</button></a></td>
                         </tr>
 
                     )

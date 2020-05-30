@@ -52,15 +52,17 @@ handleChangeCommunityNameText(event, index){
      console.log(this.state.results);
      return (
          <div className="container">
-        <h3>Add/Update Communities</h3>
-
-        <table className="table table-striped table-dark">
+        <div className="formtitle">
+          <h1>ALL COMMUNITIES</h1>
+        </div>
+        <table id="allCommunityTable" className="table table-striped table-dark">
             <thead>
                 <tr>
                 <th scope="col">#</th>
                 <th scope="col">Community Name</th>
                 </tr>
             </thead>
+            
             <tbody>
                 {this.state.results.map(
                     (community,index)=>{

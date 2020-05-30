@@ -81,6 +81,9 @@ export default class ChartHistory extends Component {
         return (
             <div className="wrapper mx-auto align-middle">
                 <form  onSubmit={(e)=>{this.HandleChart(e)}}>
+                <div id="chartHistoryTitle">
+                    <h1>CHART HISTORY</h1>
+                </div>
                 <div className="form-group">
                
                 <label for="date" id="date">Date: </label>
@@ -93,8 +96,6 @@ export default class ChartHistory extends Component {
                         </select>
                 </div>
                     <button className="generate" >Generate</button>
-                <div className="wrapperThree">Chart History
-                </div>
                 <div className="wrapperTwo">
                     <h5>Category : <span id="title"></span></h5>
                     <Chart type="pie" data={this.state.dataChart} />

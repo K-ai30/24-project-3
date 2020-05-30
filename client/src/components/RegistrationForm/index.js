@@ -102,6 +102,9 @@ class RegistrationForm extends Component {
         return (
             <React.Fragment>
             <form className="wrapper mx-auto align-middle">
+            <div id="addResidentTitle">
+                <h1>ADD RESIDENT</h1>
+            </div>
                 <Row>
                     <Col>
                         <div className="input-group mb-3" labeltext="Community">
@@ -127,11 +130,12 @@ class RegistrationForm extends Component {
                                 <option value="youth">Youth</option>
                             </select>
                         </div>
-                        <TextInput HandleOnChangeText={this.HandleOnChangeText} id="first-name" placeholder="Jane" name='first' labeltext="First Name" />
-                        <TextInput HandleOnChangeText={this.HandleOnChangeText} id="phone" placeholder="(404) 300-5000" name='phone' labeltext="Phone Number" />
-                        <TextInput HandleOnChangeText={this.HandleOnChangeText} id="addressOne" placeholder="123 Some Street" name="address1" labeltext="Address 1" />
-                        <TextInput HandleOnChangeText={this.HandleOnChangeText} id="city" placeholder="Atlanta" labeltext="City" name="city" />
-                        <TextInput HandleOnChangeText={this.HandleOnChangeText} id="state" placeholder="Georgia" labeltext="State" name='state' />
+        
+                        <TextInput HandleOnChangeText={this.HandleOnChangeText} id="first-name" placeholder="Jane" name='first' labelText="First Name" />
+                        <TextInput HandleOnChangeText={this.HandleOnChangeText} id="phone" placeholder="(404) 300-5000" name='phone' labelText="Phone Number" />
+                        <TextInput HandleOnChangeText={this.HandleOnChangeText} id="addressOne" placeholder="123 Some Street" name="address1" labelText="Address 1" />
+                        <TextInput HandleOnChangeText={this.HandleOnChangeText} id="city" placeholder="Atlanta" labelText="City" name="city" />
+                        <TextInput HandleOnChangeText={this.HandleOnChangeText} id="state" placeholder="Georgia" labelText="State" name='state' />
                     </Col>
                     <Col>
 
@@ -139,6 +143,7 @@ class RegistrationForm extends Component {
                         <label for="dob" id="DOB">Date Of Birth: </label>
                         <input className="form-control" onChange={(e) => { this.HandleOnChangeForm(e) }} name='dob' type="date" id="birthday"></input>
 
+                        <label className="input-group-text" >Gender</label>
                         <div className="input-group">
                             <div className="form-check">
                                 <input className="form-check-input" type="radio" name="gender" id="exampleRadios1" value="male" onChange={(e) => { this.HandleOnChangeForm(e) }} />
@@ -154,12 +159,10 @@ class RegistrationForm extends Component {
                             </div>
 
                         </div>
-
-                        <TextInput HandleOnChangeText={this.HandleOnChangeText} id="last-name" placeholder="Smith" name='last' labeltext="Last Name" />
-                        <TextInput HandleOnChangeText={this.HandleOnChangeText} id="emailTwo" placeholder="Jane_Smith@test.com" name='email' labeltext="Email" />
-                        <TextInput HandleOnChangeText={this.HandleOnChangeText} id="password" placeholder="******" name='password' labeltext="Password" />
-                        <TextInput HandleOnChangeText={this.HandleOnChangeText} id="addressTwo" placeholder="Apt 100" name='address2' labeltext="address 2" />
-                        <TextInput HandleOnChangeText={this.HandleOnChangeText} id="zip" placeholder="30310" type="number" name='zip' labeltext="Zip" />
+                        <TextInput HandleOnChangeText={this.HandleOnChangeText} id="last-name" placeholder="Smith" name='last' labelText="Last Name" />
+                        <TextInput HandleOnChangeText={this.HandleOnChangeText} id="emailTwo" placeholder="Jane_Smith@test.com" name='email' labelText="Email" />
+                        <TextInput HandleOnChangeText={this.HandleOnChangeText} id="addressTwo" placeholder="Apt 100" name='address2' labelText="address 2" />
+                        <TextInput HandleOnChangeText={this.HandleOnChangeText} id="zip" placeholder="30310" type="number" name='zip' labelText="Zip" />
                     </Col>
                 </Row>
                 <button id="submitResident" className="btn btn-info custom-color" onClick={(e) => this.HandleSubmitForm(e)}>Submit</button>

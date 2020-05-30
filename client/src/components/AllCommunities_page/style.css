@@ -1,3 +1,12 @@
-.table{
-    margin-top: 6rem;
+
+.formtitle{
+    background-color: rgb(30, 22, 32);
+    margin-top: 20px;
+    text-align: center;
+    color: cornsilk !important;
+   padding: 20px;
+
+}
+#allCommunityTable{
+    margin-top:0px;
 }
