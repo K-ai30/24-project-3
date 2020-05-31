@@ -214,35 +214,42 @@ class ReportPage extends Component {
 
   }
   
+ 
+
   div2PDF = e => {
-    // const but = e.target;
-    // but.style.display = "none";
-    let input = window.document.getElementsByClassName("wrapperTwo")[0];
+        // const but = e.target;
+        // but.style.display = "none";
+        let input = window.document.getElementsByClassName("div2PDF")[0];
+        console.log(input);
+        const inputCanvas = input.children[1];
+        console.log(inputCanvas);
+        html2canvas(inputCanvas,{ 
+          windowWidth: 1000, 
+          windowHeight: 1000,
+          height:800,
+          width:800
+        }).then(canvas => {
+            const img = canvas.toDataURL("image/png");
+            const pdf = new pdfConverter("1", "pt");
 
-    console.log(input.children);
 
-    const inputCanvas = input.children[1];
-    html2canvas(input, 
-    { 
-      windowWidth: 1000, 
-      windowHeight: 1000,
-    }
-    ).then(canvas => {
-        const img = canvas.toDataURL("image/png");
-        console.log(img);
-        const pdf = new pdfConverter("1", "pt");
-        pdf.addImage(
-            img,
-            "png",
-            input.offsetLeft,
-            input.offsetTop,
-            input.scrollWidth,
-            input.scrollHeight
-        );
-        pdf.save("chart.pdf");
-        // but.style.display = "block";
-    });
-};
+            //fillText(text, x, y, maxWidth)
+            pdf.setFontSize(30);
+            pdf.text(240, 150, this.state.chartData.datasets[0].label);
+            console.log(img);
+
+            pdf.addImage(
+                img,
+                "png",
+                100,
+                200,
+                800,
+                800
+            );
+            pdf.save("chart.pdf");
+            // but.style.display = "block";
+        });
+    };
 
   render() {
     
@@ -296,10 +303,10 @@ class ReportPage extends Component {
         </div>
         <button className="generate">Generate Report</button>
         <button className="save" onClick={(e)=>this.HandleSaveChart(e)}>Save Chart</button>
-        <button className="download">Download</button>
+        <button className="download" onClick={(e)=> this.div2PDF(e)}>Download</button>
 
         <div className="wrapperTwo">
-          <Chart type="pie" label={this.state.chartData.datasets.label} data={this.state.chartData} />
+          <Chart id="chart" type="pie" label={this.state.chartData.datasets[0].label} data={this.state.chartData} />
           {/* <canvas id="myChart" width="300" height="300"> */}
           {/* <Chart/> */}
           {/* </canvas> */}
