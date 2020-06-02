@@ -146,13 +146,13 @@ class RegistrationForm extends Component {
                         <label className="input-group-text" >Gender</label>
                         <div className="input-group">
                             <div className="form-check">
-                                <input className="form-check-input" type="radio" name="gender" id="exampleRadios1" value="male" onChange={(e) => { this.HandleOnChangeForm(e) }} />
+                                <input className="form-check-input" type="radio" name="gender" id="exampleRadios1" value="Male" onChange={(e) => { this.HandleOnChangeForm(e) }} />
                                 <label className="form-check-label" htmlFor="gender">
                                     Male
                                 </label>
                             </div>
                             <div className="form-check">
-                                <input className="form-check-input" type="radio" name="gender" id="exampleRadios1" value="female" onChange={(e) => { this.HandleOnChangeForm(e) }} />
+                                <input className="form-check-input" type="radio" name="gender" id="exampleRadios1" value="Female" onChange={(e) => { this.HandleOnChangeForm(e) }} />
                                 <label className="form-check-label" htmlFor="gender">
                                     Female
                                     </label>
