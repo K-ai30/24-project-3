@@ -5,13 +5,13 @@ const pdfConverter = require("jspdf");
 
 class Chart extends Component {
 
-    renderChart(chartType, data) {
+    renderChart(chartType, data,label) {
        
         switch(chartType) {
             case "pie": 
-                return <div className="div2PDF"><Pie data={data} width={100} height={50}/></div>;
+                return <div className="div2PDF"><Pie data={data} width={100} height={50} title={label}/></div>;
             case "bar": 
-                return <div className="div2PDF"><Bar data={data} width={100} height={50}/></div>;
+                return <div className="div2PDF"><Bar data={data} width={100} height={50} title={label}/></div>;
             default: 
                 return <div className="div2PDF"></div>;
 
@@ -40,7 +40,8 @@ class Chart extends Component {
     // };
 
     render() {
-        return this.renderChart(this.props.type, this.props.data);
+        console.log("this.props.label: "+ this.props.label);
+        return this.renderChart(this.props.type, this.props.data, this.props.label);
         }
     }
     

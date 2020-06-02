@@ -34,7 +34,7 @@ function App() {
           <ProtectedRoute exact path="/signup" component={SignUpForm}/>
           <ProtectedRoute exact path="/event" component={EventForm}/>
           <ProtectedRoute exact path="/allevents" component={AllEvents}/>
-          <ProtectedRoute exact path="/reports" component={ReportPage}/>
+          <Route exact path="/reports" component={ReportPage}/>
           <ProtectedRoute exact path="/charthistory" component={ChartHistory}/>
           <ProtectedRoute exact path="/dashboard" component={DashboardPage}/>
           <ProtectedRoute exact path="/updatecommunities" component={AllCommunites}/>
