@@ -30,8 +30,16 @@ Or, visit the deployed version at:
 * CSS3
 * Bootstrap
 * JavaScript
+* MongoDB
+* Mongoose
+* Express
 * React
-* AWS Integration
+* Node.js
+* React-Router-DOM
+* React Chart.js2
+* html2Canvas
+* React-Date-Picker
+* Passort.js
 
 ### Notes
 
