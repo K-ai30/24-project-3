@@ -109,11 +109,11 @@ class ReportPage extends Component {
             {chartData: {
               communityID:communityID,
               communityName:communityName,
-              labels: ["Male","Female"],
+              labels: ["Male", "Female"],
               datasets: [
                 {
                   label: ["Gender"],
-                  data: [Male,Female],
+                  data: [Male, Female],
                   backgroundColor:this.state.chartData.datasets[0].backgroundColor
                  
                 }
@@ -255,18 +255,17 @@ class ReportPage extends Component {
     
     let alert = "";
     if(this.state.alert==="error") {
-         alert= <div class= "alert alert-danger"  role="alert">
-                   <p> Error!</p>
+         alert= <div className= "alert alert-danger" role="alert">
+                   <p>Error!</p>
                    <p>First generate the form, then click on SAVE button!</p>
                 </div>
         
     }
     else if(this.state.alert==="success"){
-         alert= <div class="alert alert-success"  role="alert">
-             <h5>Success !</h5>
-             <p>Chart Data Saved.</p>
-            
-        </div>
+         alert= <div className="alert alert-success" role="alert">
+             <h5>Success!</h5>
+             <p>Chart Data Saved!</p>    
+         </div>
     }
     else{console.log("Fill Out The Form and click on generate Report button .")}
     
@@ -274,7 +273,7 @@ class ReportPage extends Component {
    
     return (
 
-      <form  onSubmit={(e)=>this.HandleReportBtn(e)} className="wrapper mx-auto align-middle">
+      <form onSubmit={(e)=>this.HandleReportBtn(e)} className="wrapper mx-auto align-middle">
         <div id="reportTitle">
           <h1>Reports</h1>
         </div>

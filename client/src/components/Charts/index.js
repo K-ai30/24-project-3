@@ -5,7 +5,7 @@ const pdfConverter = require("jspdf");
 
 class Chart extends Component {
 
-    renderChart(chartType, data,label) {
+    renderChart(chartType, data, label) {
        
         switch(chartType) {
             case "pie": 

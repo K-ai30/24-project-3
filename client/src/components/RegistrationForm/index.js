@@ -85,16 +85,16 @@ class RegistrationForm extends Component {
 
         let alert = "";
         if(this.state.submitStatus==="error") {
-             alert= <div class= "alert alert-danger"  role="alert">
-                       <p> All fields must be filled  !</p>
-                       <p>Or choose different Email address(email address should be uniq !)</p>
+             alert= <div className="alert alert-danger" role="alert">
+                       <p> All fields must be filled!</p>
+                       <p> Or choose a different email address (email address should be unique!)</p>
                     </div>
             
         }
         else if(this.state.submitStatus==="success"){
              alert= <div class="alert alert-success"  role="alert">
-                 <h5>Success !</h5>
-                 <p>Your user registration was successful.</p>
+                 <h5>Success!</h5>
+                 <p>Your user registration was successful!</p>
                 
             </div>
         }
@@ -140,7 +140,7 @@ class RegistrationForm extends Component {
                     <Col>
 
                         {/* <TextInput HandleOnChangeText={this.HandleOnChangeText} id="dateOfBirth" type="date" placeholder="05-01-1959" name='dob' labeltext="Date of Birth" /> */}
-                        <label for="dob" id="DOB">Date Of Birth: </label>
+                        <label htmlFor="dob" id="DOB">Date Of Birth: </label>
                         <input className="form-control" onChange={(e) => { this.HandleOnChangeForm(e) }} name='dob' type="date" id="birthday"></input>
 
                         <label className="input-group-text" >Gender</label>
@@ -155,7 +155,7 @@ class RegistrationForm extends Component {
                                 <input className="form-check-input" type="radio" name="gender" id="exampleRadios1" value="Female" onChange={(e) => { this.HandleOnChangeForm(e) }} />
                                 <label className="form-check-label" htmlFor="gender">
                                     Female
-                                    </label>
+                                </label>
                             </div>
 
                         </div>
