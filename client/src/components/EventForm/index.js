@@ -88,7 +88,7 @@ class EventForm extends Component {
                     
                 </select>
                 </div>
-                <label  >Date And Time</label>
+                <label>Date And Time</label>
                 <div></div>
                 <DateTimePicker 
                     onChange={this.changeDateTime}

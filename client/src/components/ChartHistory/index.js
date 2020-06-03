@@ -86,7 +86,7 @@ export default class ChartHistory extends Component {
                 </div>
                 <div className="form-group">
                
-                <label for="date" id="date">Date: </label>
+                <label hmtlFor="date" id="date">Date: </label>
                         <select className="form-control" id="inputGroupSelect01" name="date" type="date" onChange={(e) => { this.HandleOnChangeForm(e) }}>
                                 <option selected disabled>Choose...</option>
                                 {this.state.allCharts.map((item, index) => {
@@ -95,7 +95,7 @@ export default class ChartHistory extends Component {
                                 })}
                         </select>
                 </div>
-                    <button className="generate" >Generate</button>
+                    <button className="generate">Generate</button>
                 <div className="wrapperTwo">
                     <h5>Category : <span id="title"></span></h5>
                     <Chart type="pie" data={this.state.dataChart} />

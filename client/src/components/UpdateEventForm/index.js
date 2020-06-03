@@ -94,7 +94,7 @@ class UpdateEventForm extends Component {
                     
                 </select>
                 </div>
-                <label  >Date And Time</label>
+                <label>Date And Time</label>
                 <div></div>
                 <DateTimePicker 
                     onChange={this.changeDateTime}
@@ -104,7 +104,7 @@ class UpdateEventForm extends Component {
                 <Col>
                     <div className="form-group">
                         <label>Event Name</label>
-                        <input type="text" className="form-control"  onChange={(event) => this.changeName(event)} value={this.state.event.name}/>
+                        <input type="text" className="form-control" onChange={(event) => this.changeName(event)} value={this.state.event.name}/>
                     </div>                  
                 </Col>
                 
