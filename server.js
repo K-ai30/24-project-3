@@ -24,7 +24,7 @@ if (process.env.NODE_ENV === "production") {
 
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/datatrak", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.DB_URI || "mongodb://localhost/datatrak", { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
