@@ -20,11 +20,13 @@ if (process.env.NODE_ENV === "production") {
 }
 
 
-
-
-
 // Connect to the Mongo DB
 mongoose.connect(process.env.DB_URI || "mongodb://localhost/datatrak", { useNewUrlParser: true, useUnifiedTopology: true });
+
+// If deployed, use the deployed database.  Otherwise use the local mongoHeadlines database
+// var DB_URI = process.env.DB_URI || "mongodb://localhost/mongoHeadlines";
+// Connect to the Mongo DB
+// mongoose.connect(DB_URI);
 
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
